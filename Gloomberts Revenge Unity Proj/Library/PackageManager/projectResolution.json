@@ -8,6 +8,14 @@
     "C:\\Users\\henry\\Desktop\\Gloomberts-Revenge\\Gloomberts Revenge Unity Proj\\Packages\\packages-lock.json"
   ],
   "outputs": {
+    "com.unity.ai.navigation@2.0.6": {
+      "name": "com.unity.ai.navigation",
+      "resolvedPath": "C:\\Users\\henry\\Desktop\\Gloomberts-Revenge\\Gloomberts Revenge Unity Proj\\Library\\PackageCache\\com.unity.ai.navigation",
+      "fingerprint": "c74b2724ed42c1aa0380e294156d7f54a7ae2ec6",
+      "editorCompatibility": "2023.2.0a18",
+      "version": "2.0.6",
+      "source": "registry"
+    },
     "com.unity.collab-proxy@2.7.1": {
       "name": "com.unity.collab-proxy",
       "resolvedPath": "C:\\Users\\henry\\Desktop\\Gloomberts-Revenge\\Gloomberts Revenge Unity Proj\\Library\\PackageCache\\com.unity.collab-proxy",
