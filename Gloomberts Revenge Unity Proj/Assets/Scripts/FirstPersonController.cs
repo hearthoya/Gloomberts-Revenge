@@ -97,6 +97,7 @@ public class FirstPersonController : MonoBehaviour
     public bool enableJump = true;
     public KeyCode jumpKey = KeyCode.Space;
     public float jumpPower = 5f;
+    public LayerMask groundMask;
 
     // Internal Variables
     private bool isGrounded = false;
@@ -446,10 +447,11 @@ public class FirstPersonController : MonoBehaviour
     {
         Vector3 origin = new Vector3(transform.position.x, transform.position.y - (transform.localScale.y * .5f), transform.position.z);
         Vector3 direction = transform.TransformDirection(Vector3.down);
-        float distance = .75f;
-
-        if (Physics.Raycast(origin, direction, out RaycastHit hit, distance))
+        float distance = 10f;
+        bool hit = Physics.Raycast(origin, direction, distance, groundMask);
+        if (hit)
         {
+            Debug.Log("We are did it");
             Debug.DrawRay(origin, direction * distance, Color.red);
             isGrounded = true;
         }
@@ -682,13 +684,18 @@ public class FirstPersonController : MonoBehaviour
 
         GUILayout.Label("Jump", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleLeft, fontStyle = FontStyle.Bold, fontSize = 13 }, GUILayout.ExpandWidth(true));
 
-        fpc.enableJump = EditorGUILayout.ToggleLeft(new GUIContent("Enable Jump", "Determines if the player is allowed to jump."), fpc.enableJump);
-
+        fpc.enableJump = EditorGUILayout.ToggleLeft(new GUIContent("Enable Jump", "Determines if the player can jump."), fpc.enableJump);
         GUI.enabled = fpc.enableJump;
-        fpc.jumpKey = (KeyCode)EditorGUILayout.EnumPopup(new GUIContent("Jump Key", "Determines what key is used to jump."), fpc.jumpKey);
-        fpc.jumpPower = EditorGUILayout.Slider(new GUIContent("Jump Power", "Determines how high the player will jump."), fpc.jumpPower, .1f, 20f);
+
+        fpc.jumpKey = (KeyCode)EditorGUILayout.EnumPopup(new GUIContent("Jump Key", "Key used to initiate a jump."), fpc.jumpKey);
+        fpc.jumpPower = EditorGUILayout.Slider(new GUIContent("Jump Power", "The power of the jump."), fpc.jumpPower, 0.1f, 20f);
+
+        // Ground Mask Layer Selection
+        fpc.groundMask = EditorGUILayout.LayerField(new GUIContent("Ground Mask", "Layer used for detecting the ground."), fpc.groundMask);
+
         GUI.enabled = true;
 
+        // End of the Jump section
         EditorGUILayout.Space();
 
         #endregion
