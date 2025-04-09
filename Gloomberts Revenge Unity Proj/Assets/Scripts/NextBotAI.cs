@@ -7,7 +7,7 @@ public class NextBotAI : MonoBehaviour
 {
     [Header("Next Bot AI Settings")]
     [Tooltip("NavMeshAgent component of the next bot")]
-    public NavMeshAgent nextBotAgent; // Our next bot
+    NavMeshAgent nextBotAgent; // Our next bot
 
     [Header("Player Settings")]
     [Tooltip("Tag of the player object")]
@@ -18,6 +18,7 @@ public class NextBotAI : MonoBehaviour
     private void Start()
     {
         // Find the player object based on the tag
+        nextBotAgent = this.GetComponent<NavMeshAgent>();
         GameObject playerObject = GameObject.FindGameObjectWithTag(playerTag);
         if (playerObject != null)
         {
