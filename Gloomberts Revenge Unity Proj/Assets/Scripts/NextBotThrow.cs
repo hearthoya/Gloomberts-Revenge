@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NextBotThrow : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class NextBotThrow : MonoBehaviour
     [Header("Visualization")]
     [Tooltip("Color of the sphere radius visualizer")]
     public Color visualizerColor = Color.red;
+    private float hit = 0;
 
     private void OnDrawGizmosSelected()
     {
@@ -27,6 +29,11 @@ public class NextBotThrow : MonoBehaviour
             Rigidbody rigidbody = collider.GetComponent<Rigidbody>();
             if (rigidbody != null)
             {
+                hit++;
+                if (hit >= 10)
+                {
+                    SceneManager.LoadScene("Game Over");
+                }
                 Vector3 awayDirection = collider.transform.position - transform.position;
                 rigidbody.AddForce(awayDirection.normalized * pushForce, ForceMode.Impulse);
             }
