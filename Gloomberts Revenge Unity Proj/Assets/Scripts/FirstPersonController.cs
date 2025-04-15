@@ -132,6 +132,13 @@ public class FirstPersonController : MonoBehaviour
 
     #endregion
 
+    #region Key Variables
+    public KeyCode interactKey = KeyCode.E;
+    private GameObject nearbyKey;
+    public float pickupRange = 3f;
+    bool hasKey = false;
+    public Image keyIcon;
+    #endregion
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -147,6 +154,10 @@ public class FirstPersonController : MonoBehaviour
         {
             sprintRemaining = sprintDuration;
             sprintCooldownReset = sprintCooldown;
+        }
+        if (keyIcon != null)
+        {
+            keyIcon.enabled = false;
         }
     }
 
@@ -363,6 +374,16 @@ public class FirstPersonController : MonoBehaviour
         {
             HeadBob();
         }
+        // Key Pickup Logic
+        if (nearbyKey != null)
+        {
+            float distance = Vector3.Distance(transform.position, nearbyKey.transform.position);
+            if (distance <= pickupRange && Input.GetKeyDown(interactKey))
+            {
+                PickupKey();
+            }
+        }
+
     }
 
     void FixedUpdate()
@@ -460,6 +481,17 @@ public class FirstPersonController : MonoBehaviour
             isGrounded = false;
         }
     }
+    private void PickupKey()
+    {
+        Debug.Log("Key picked up!");
+        hasKey = true;
+        if (keyIcon != null)
+        {
+            keyIcon.enabled = true;
+        }
+        Destroy(nearbyKey);
+        
+    }
 
     private void Jump()
     {
@@ -476,6 +508,23 @@ public class FirstPersonController : MonoBehaviour
             Crouch();
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Key"))
+        {
+            nearbyKey = other.gameObject;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Key") && other.gameObject == nearbyKey)
+        {
+            nearbyKey = null;
+        }
+    }
+
+
 
     private void Crouch()
     {
