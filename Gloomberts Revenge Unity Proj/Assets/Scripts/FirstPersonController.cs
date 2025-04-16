@@ -139,6 +139,7 @@ public class FirstPersonController : MonoBehaviour
     bool hasKey = false;
     public Image keyIcon;
     #endregion
+    private GameObject door;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -383,6 +384,14 @@ public class FirstPersonController : MonoBehaviour
                 PickupKey();
             }
         }
+        if (door != null)
+        {
+            float distance = Vector3.Distance(transform.position, door.transform.position);
+            if (distance <= 1 && Input.GetKeyDown(KeyCode.Q) && hasKey)
+            {
+                openDoor();
+            }
+        }
 
     }
 
@@ -492,6 +501,12 @@ public class FirstPersonController : MonoBehaviour
         Destroy(nearbyKey);
         
     }
+    private void openDoor()
+    {
+        Debug.Log("Door Opened");
+        Destroy(door);
+
+    }
 
     private void Jump()
     {
@@ -514,6 +529,10 @@ public class FirstPersonController : MonoBehaviour
         {
             nearbyKey = other.gameObject;
         }
+        if (other.CompareTag("Door"))
+        {
+            door = other.gameObject;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -521,6 +540,10 @@ public class FirstPersonController : MonoBehaviour
         if (other.CompareTag("Key") && other.gameObject == nearbyKey)
         {
             nearbyKey = null;
+        }
+        if (other.CompareTag("Door") && other.gameObject == door)
+        {
+            door = null;
         }
     }
 
