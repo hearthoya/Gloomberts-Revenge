@@ -388,11 +388,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: beea43a8a5c443a41bfe71654dc6f831, type: 3}
     - target: {fileID: 8281920179164816771, guid: 7b9fa3405ea1e184882b6aa1421e0552, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8281920179164816771, guid: 7b9fa3405ea1e184882b6aa1421e0552, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8281920179905391587, guid: 7b9fa3405ea1e184882b6aa1421e0552, type: 3}
       propertyPath: pushForce

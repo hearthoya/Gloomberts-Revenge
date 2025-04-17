@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 58e2dd0641e8b8c4f910de4cc26d7fd5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: beea43a8a5c443a41bfe71654dc6f831, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 8281920180139184397}
   - component: {fileID: 8281920180139184396}
   m_Layer: 0
-  m_Name: Template
+  m_Name: Gloombert
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
