@@ -484,7 +484,7 @@ public class FirstPersonController : MonoBehaviour
         bool hit = Physics.Raycast(origin, direction, distance, groundMask);
         if (hit)
         {
-            Debug.Log("We are did it");
+            // Debug.Log("We are did it");
             Debug.DrawRay(origin, direction * distance, Color.red);
             isGrounded = true;
         }
