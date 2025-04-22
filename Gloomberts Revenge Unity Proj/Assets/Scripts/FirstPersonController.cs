@@ -386,7 +386,7 @@ public class FirstPersonController : MonoBehaviour
         if (door != null)
         {
             float distance = Vector3.Distance(transform.position, door.transform.position);
-            if (distance <= 1 && Input.GetKeyDown(KeyCode.Q) && hasKey)
+            if (distance <= 1 && Input.GetKeyDown(KeyCode.E) && hasKey)
             {
                 openDoor();
             }

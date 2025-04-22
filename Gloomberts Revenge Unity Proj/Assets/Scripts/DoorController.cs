@@ -1,57 +1,31 @@
 using UnityEngine;
-using System.Collections;
 
 public class DoorController : MonoBehaviour
 {
-    // the door from this object
-    public GameObject Door;
-    // the door copied and rotated/moved to be the opened door
-    public GameObject DoorOpen;
-    // this will be a copy of the original door so that we have some numbers to work with.
-    private GameObject DoorClosed;
-    // this controls if the door is opened or closed.
+    public Transform door; // Assign this to your door object in the inspector
     public bool isOpened = false;
-
-    // this is the movement rate (if movemnt is applied to the door)
-    public float moveSpeed = 3;
-    // this is the rotation rate (if rotation is applied to the door)
-    public float rotationSpeed = 90;
+    public float rotationSpeed = 90f; // Degrees per second
+    private Quaternion closedRotation;
+    private Quaternion openRotation;
 
     void Start()
     {
-        // copy the door to keep its position
-        DoorClosed = Instantiate(Door, Door.transform.position, Door.transform.rotation);
-        // hide both the open and closed door
-        DoorClosed.SetActive(false);
-        DoorOpen.SetActive(false);
+        closedRotation = door.rotation;
+        openRotation = Quaternion.Euler(door.eulerAngles + new Vector3(0, 90, 0)); // Rotate 90 degrees on Y axis
     }
 
     void Update()
     {
-        // every frame, move the door towards the Open/Closed door
-        var target = isOpened ? DoorOpen : DoorClosed;
-        // these actually do the moving/rotating
-        Door.transform.position = Vector3.MoveTowards(Door.transform.position, target.transform.position, moveSpeed * Time.deltaTime);
-        Door.transform.rotation = Quaternion.RotateTowards(Door.transform.rotation, target.transform.rotation, rotationSpeed * Time.deltaTime);
+        // Smoothly rotate the door towards the target rotation
+        Quaternion targetRotation = isOpened ? openRotation : closedRotation;
+        door.rotation = Quaternion.RotateTowards(door.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-    void OnTriggerEnter(Collider player)
+    void OnTriggerStay(Collider other)
     {
-        // whenever anything enters the trigger, open the door
-        if (Input.GetKeyDown(KeyCode.E))
+        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
         {
-            isOpened = true;
-        }
-        if (isOpened && (Input.GetKeyDown(KeyCode.E))){ 
-            isOpened = false;
+            isOpened = !isOpened;
         }
     }
-
-    //void OnTriggerExit(Collider player)
-    //{
-    //    // whenever anything exits the trigger, close the door.
-
-    //        isOpened = false;
-
-    //}
 }
