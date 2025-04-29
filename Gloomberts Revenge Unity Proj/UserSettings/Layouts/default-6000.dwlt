@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 308.8
     height: 490.4
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -245,14 +245,14 @@ MonoBehaviour:
     y: 490.4
     width: 1152
     height: 226.4
-  m_MinSize: {x: 101, y: 126}
-  m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 231, y: 276}
+  m_MaxSize: {x: 10001, y: 10026}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
   - {fileID: 16}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -272,8 +272,8 @@ MonoBehaviour:
     y: 0
     width: 384
     height: 716.8
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -301,9 +301,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 564.8
+    y: 569.60004
     width: 1151
-    height: 205.19998
+    height: 200.4
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Visuals/Materials
+    - Assets/Scenes/Floors
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,31 +336,31 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Visuals/Materials
+  - Assets/Scenes/Floors
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\dafas\OneDrive\Escritorio\Unity_Projects\Gloomberts-Revenge\Gloomberts
     Revenge Unity Proj
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 214.80002}
-    m_SelectedIDs: 8eaf0000
-    m_LastClickedID: 44942
-    m_ExpandedIDs: 0000000020ae000022ae000024ae000026ae000028ae00002aae0000
+    scrollPos: {x: 0, y: 175}
+    m_SelectedIDs: d8ad0000
+    m_LastClickedID: 44504
+    m_ExpandedIDs: 00000000d0ad0000d2ad0000d4ad0000d6ad0000d8ad0000daad0000d8b3000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Floor_1
+      m_OriginalName: Floor_1
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 46028
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
       m_ClientGUIView: {fileID: 10}
@@ -375,7 +375,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000020ae000022ae000024ae000026ae000028ae00002aae0000
+    m_ExpandedIDs: 00000000d0ad0000d2ad0000d4ad0000d6ad0000d8ad0000daad0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -401,8 +401,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: d0a80000
-    m_LastClickedInstanceID: 43216
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000068230000d22300004c85000000000000
     m_RenameOverlay:
@@ -472,9 +472,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: acab0000
-      m_LastClickedID: 43948
-      m_ExpandedIDs: bafaffff70ac0000
+      m_SelectedIDs: a2ad0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: b8d1ffffd6d3ffffecdaffff1edefffffeecfffff4faffffaca90000beab0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -994,9 +994,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -5.7241273, y: 10.013258, z: -82.68621}
+    m_Target: {x: 9.588806, y: 13.446233, z: -84.865654}
     speed: 2
-    m_Value: {x: -5.7241273, y: 10.013258, z: -82.68621}
+    m_Value: {x: 9.588806, y: 13.446233, z: -84.865654}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1042,13 +1042,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.05085387, y: -0.9464302, z: 0.26250756, w: 0.18271083}
+    m_Target: {x: -0.017248945, y: -0.9658233, z: 0.06677335, w: -0.25120372}
     speed: 2
-    m_Value: {x: 0.05105726, y: -0.9458262, z: 0.26356277, w: 0.18259409}
+    m_Value: {x: -0.016863441, y: -0.965878, z: 0.06561241, w: -0.24998069}
   m_Size:
-    m_Target: 45.21187
+    m_Target: 129.61664
     speed: 2
-    m_Value: 43.264946
+    m_Value: 124.03506
   m_Ortho:
     m_Target: 0
     speed: 2

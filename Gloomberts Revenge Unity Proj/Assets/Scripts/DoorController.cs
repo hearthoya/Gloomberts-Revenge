@@ -2,30 +2,46 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    public Transform door; // Assign this to your door object in the inspector
-    public bool isOpened = false;
+    Transform door;
+    bool isOpened = false;
+    bool playerInTrigger = false;
     public float rotationSpeed = 90f; // Degrees per second
     private Quaternion closedRotation;
     private Quaternion openRotation;
 
+
     void Start()
     {
+        door = this.transform;
         closedRotation = door.rotation;
         openRotation = Quaternion.Euler(door.eulerAngles + new Vector3(0, 90, 0)); // Rotate 90 degrees on Y axis
     }
 
+
     void Update()
     {
-        // Smoothly rotate the door towards the target rotation
+        if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
+        {
+            isOpened = !isOpened;
+        }
+
         Quaternion targetRotation = isOpened ? openRotation : closedRotation;
         door.rotation = Quaternion.RotateTowards(door.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (other.CompareTag("Player"))
         {
-            isOpened = !isOpened;
+            playerInTrigger = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInTrigger = false;
         }
     }
 }
