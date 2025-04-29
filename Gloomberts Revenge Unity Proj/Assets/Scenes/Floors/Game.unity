@@ -4917,7 +4917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
   playerSpawn: {x: 70, y: 1, z: 37}
-  gloombertPrefab: {fileID: 0}
+  gloombertPrefab: {fileID: 8281920180139184387, guid: 7b9fa3405ea1e184882b6aa1421e0552, type: 3}
   gloomSpawn: {x: 9.59502, y: 2.6, z: -55.864124}
   keys: []
 --- !u!4 &762490010
