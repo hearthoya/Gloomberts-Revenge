@@ -174,7 +174,7 @@ MonoBehaviour:
   enableSprint: 1
   unlimitedSprint: 0
   sprintKey: 304
-  sprintSpeed: 7
+  sprintSpeed: 8
   sprintDuration: 5
   sprintCooldown: 0.5
   sprintFOV: 80
@@ -203,6 +203,10 @@ MonoBehaviour:
   interactKey: 101
   pickupRange: 3
   keyIcon: {fileID: 0}
+  footstepAudioSource: {fileID: 0}
+  walkSound: {fileID: 8300000, guid: 47f8e2e3f99f2864199d85ed1a71d78b, type: 3}
+  sprintSound: {fileID: 8300000, guid: 21e61bad593b4fd4d9a2d55985157c4f, type: 3}
+  footstepInterval: 0.5
 --- !u!82 &-3792584630072734730
 AudioSource:
   m_ObjectHideFlags: 0
