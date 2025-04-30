@@ -10,20 +10,23 @@ using UnityEngine;
 using UnityEngine.UI;
 
 #if UNITY_EDITOR
-    using UnityEditor;
-    using System.Net;
+using UnityEditor;
+using System.Net;
 #endif
 
 public class FirstPersonController : MonoBehaviour
 {
     private Rigidbody rb;
 
-    [Header("Audio Settings")]
-    public AudioClip walk;
-    public AudioClip sprint;
-    public AudioClip jump;
+    [Header("Audio")]
+    public AudioSource walkingAudioSource;
+    public AudioClip walkingClip;
 
-    private AudioSource movementAudioSource;
+    public AudioSource sprintingAudioSource;
+    public AudioClip sprintingClip;
+
+    public AudioSource jumpAudioSource;
+    public AudioClip jumpClip;
 
     #region Camera Movement Variables
     [Tooltip("Camera Settings")]
@@ -170,21 +173,16 @@ public class FirstPersonController : MonoBehaviour
         {
             keyIcon.enabled = false;
         }
-
-        //init audio
-        movementAudioSource = gameObject.AddComponent<AudioSource>();
-        movementAudioSource.loop = true;
-        movementAudioSource.playOnAwake = false;
     }
 
     void Start()
     {
-        if(lockCursor)
+        if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
 
-        if(crosshair)
+        if (crosshair)
         {
             crosshairObject.sprite = crosshairImage;
             crosshairObject.color = crosshairColor;
@@ -198,7 +196,7 @@ public class FirstPersonController : MonoBehaviour
 
         sprintBarCG = GetComponentInChildren<CanvasGroup>();
 
-        if(useSprintBar)
+        if (useSprintBar)
         {
             sprintBarBG.gameObject.SetActive(true);
             sprintBar.gameObject.SetActive(true);
@@ -212,12 +210,12 @@ public class FirstPersonController : MonoBehaviour
             sprintBarBG.rectTransform.sizeDelta = new Vector3(sprintBarWidth, sprintBarHeight, 0f);
             sprintBar.rectTransform.sizeDelta = new Vector3(sprintBarWidth - 2, sprintBarHeight - 2, 0f);
 
-            if(hideBarWhenFull)
+            if (hideBarWhenFull)
             {
                 sprintBarCG.alpha = 0;
             }
         }
-        
+
 
         #endregion
     }
@@ -229,7 +227,7 @@ public class FirstPersonController : MonoBehaviour
         #region Camera
 
         // Control camera movement
-        if(cameraCanMove)
+        if (cameraCanMove)
         {
             yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
 
@@ -256,7 +254,7 @@ public class FirstPersonController : MonoBehaviour
         {
             // Changes isZoomed when key is pressed
             // Behavior for toogle zoom
-            if(Input.GetKeyDown(zoomKey) && !holdToZoom && !isSprinting)
+            if (Input.GetKeyDown(zoomKey) && !holdToZoom && !isSprinting)
             {
                 if (!isZoomed)
                 {
@@ -270,24 +268,24 @@ public class FirstPersonController : MonoBehaviour
 
             // Changes isZoomed when key is pressed
             // Behavior for hold to zoom
-            if(holdToZoom && !isSprinting)
+            if (holdToZoom && !isSprinting)
             {
-                if(Input.GetKeyDown(zoomKey))
+                if (Input.GetKeyDown(zoomKey))
                 {
                     isZoomed = true;
                 }
-                else if(Input.GetKeyUp(zoomKey))
+                else if (Input.GetKeyUp(zoomKey))
                 {
                     isZoomed = false;
                 }
             }
 
             // Lerps camera.fieldOfView to allow for a smooth transistion
-            if(isZoomed)
+            if (isZoomed)
             {
                 playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, zoomFOV, zoomStepTime * Time.deltaTime);
             }
-            else if(!isZoomed && !isSprinting)
+            else if (!isZoomed && !isSprinting)
             {
                 playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, fov, zoomStepTime * Time.deltaTime);
             }
@@ -298,15 +296,15 @@ public class FirstPersonController : MonoBehaviour
 
         #region Sprint
 
-        if(enableSprint)
+        if (enableSprint)
         {
-            if(isSprinting)
+            if (isSprinting)
             {
                 isZoomed = false;
                 playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, sprintFOV, sprintFOVStepTime * Time.deltaTime);
 
                 // Drain sprint remaining while sprinting
-                if(!unlimitedSprint)
+                if (!unlimitedSprint)
                 {
                     sprintRemaining -= 1 * Time.deltaTime;
                     if (sprintRemaining <= 0)
@@ -324,7 +322,7 @@ public class FirstPersonController : MonoBehaviour
 
             // Handles sprint cooldown 
             // When sprint remaining == 0 stops sprint ability until hitting cooldown
-            if(isSprintCooldown)
+            if (isSprintCooldown)
             {
                 sprintCooldown -= 1 * Time.deltaTime;
                 if (sprintCooldown <= 0)
@@ -338,7 +336,7 @@ public class FirstPersonController : MonoBehaviour
             }
 
             // Handles sprintBar 
-            if(useSprintBar && !unlimitedSprint)
+            if (useSprintBar && !unlimitedSprint)
             {
                 float sprintRemainingPercent = sprintRemaining / sprintDuration;
                 sprintBar.transform.localScale = new Vector3(sprintRemainingPercent, 1f, 1f);
@@ -350,7 +348,7 @@ public class FirstPersonController : MonoBehaviour
         #region Jump
 
         // Gets input and calls jump method
-        if(enableJump && Input.GetKeyDown(jumpKey) && isGrounded)
+        if (enableJump && Input.GetKeyDown(jumpKey) && isGrounded)
         {
             Jump();
         }
@@ -361,17 +359,17 @@ public class FirstPersonController : MonoBehaviour
 
         if (enableCrouch)
         {
-            if(Input.GetKeyDown(crouchKey) && !holdToCrouch)
+            if (Input.GetKeyDown(crouchKey) && !holdToCrouch)
             {
                 Crouch();
             }
-            
-            if(Input.GetKeyDown(crouchKey) && holdToCrouch)
+
+            if (Input.GetKeyDown(crouchKey) && holdToCrouch)
             {
                 isCrouched = false;
                 Crouch();
             }
-            else if(Input.GetKeyUp(crouchKey) && holdToCrouch)
+            else if (Input.GetKeyUp(crouchKey) && holdToCrouch)
             {
                 isCrouched = true;
                 Crouch();
@@ -382,7 +380,7 @@ public class FirstPersonController : MonoBehaviour
 
         CheckGround();
 
-        if(enableHeadBob)
+        if (enableHeadBob)
         {
             HeadBob();
         }
@@ -415,45 +413,10 @@ public class FirstPersonController : MonoBehaviour
             // Calculate how fast we should be moving
             Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
-            bool isMoving = targetVelocity.x != 0 || targetVelocity.z != 0;
-bool onGround = isGrounded;
-AudioClip targetClip = null;
-
-if (isMoving && onGround)
-{
-    if (Input.GetKey(sprintKey) && enableSprint && sprintRemaining > 0f && !isSprintCooldown)
-    {
-        targetClip = sprint;
-    }
-    else
-    {
-        targetClip = walk;
-    }
-
-    if (movementAudioSource.clip != targetClip)
-    {
-        movementAudioSource.clip = targetClip;
-        movementAudioSource.Play();
-    }
-    else if (!movementAudioSource.isPlaying)
-    {
-        movementAudioSource.Play();
-    }
-}
-else
-{
-    if (movementAudioSource.isPlaying)
-    {
-        movementAudioSource.Stop();
-    }
-}
-
-
             // Checks if player is walking and isGrounded
             // Will allow head bob
             if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
-                AudioSource.PlayClipAtPoint(walk, transform.position);
                 isWalking = true;
             }
             else
@@ -479,6 +442,14 @@ else
                 {
                     isSprinting = true;
 
+                    if (sprintingAudioSource && sprintingClip && !sprintingAudioSource.isPlaying)
+                    {
+                        sprintingAudioSource.clip = sprintingClip;
+                        sprintingAudioSource.loop = true;
+                        sprintingAudioSource.Play();
+                    }
+
+
                     if (isCrouched)
                     {
                         Crouch();
@@ -497,9 +468,28 @@ else
             {
                 isSprinting = false;
 
-                if (hideBarWhenFull && sprintRemaining == sprintDuration)
+                // Stop sprinting audio if it's playing
+                if (sprintingAudioSource && sprintingAudioSource.isPlaying)
                 {
-                    sprintBarCG.alpha -= 3 * Time.deltaTime;
+                    sprintingAudioSource.Stop();
+                }
+
+                // PLAY walking audio
+                if ((targetVelocity.x != 0 || targetVelocity.z != 0) && isGrounded)
+                {
+                    if (walkingAudioSource && walkingClip && !walkingAudioSource.isPlaying)
+                    {
+                        walkingAudioSource.clip = walkingClip;
+                        walkingAudioSource.loop = true;
+                        walkingAudioSource.Play();
+                    }
+                }
+                else
+                {
+                    if (walkingAudioSource && walkingAudioSource.isPlaying)
+                    {
+                        walkingAudioSource.Stop();
+                    }
                 }
 
                 targetVelocity = transform.TransformDirection(targetVelocity) * walkSpeed;
@@ -545,7 +535,7 @@ else
             keyIcon.enabled = true;
         }
         Destroy(nearbyKey);
-        
+
     }
     private void openDoor()
     {
@@ -556,22 +546,21 @@ else
 
     private void Jump()
     {
-        if (enableJump && Input.GetKeyDown(jumpKey) && isGrounded)
+        if (isGrounded)
         {
-            rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+            rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse);
             isGrounded = false;
 
-            if (movementAudioSource.isPlaying)
-            {
-                movementAudioSource.Stop();
-            }
+            if (jumpAudioSource && jumpClip)
+                jumpAudioSource.PlayOneShot(jumpClip);
+        }
 
-            if (jump != null)
-            {
-                AudioSource.PlayClipAtPoint(jump, transform.position);
-            }
+        if (isCrouched && !holdToCrouch)
+        {
+            Crouch();
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Key"))
@@ -602,7 +591,7 @@ else
     {
         // Stands player up to full height
         // Brings walkSpeed back up to original speed
-        if(isCrouched)
+        if (isCrouched)
         {
             transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
             walkSpeed /= speedReduction;
@@ -622,31 +611,50 @@ else
 
     private void HeadBob()
     {
-        if(isWalking)
+        if (isWalking)
         {
             // Calculates HeadBob speed during sprint
-            if(isSprinting)
+            // Sprinting sound
+            if (isSprinting && sprintingClip != null)
             {
-                timer += Time.deltaTime * (bobSpeed + sprintSpeed);
+                if (!sprintingAudioSource.isPlaying)
+                {
+                    sprintingAudioSource.clip = sprintingClip;
+                    sprintingAudioSource.loop = true;
+                    sprintingAudioSource.Play();
+                }
+
+                if (walkingAudioSource.isPlaying)
+                {
+                    walkingAudioSource.Stop();
+                }
             }
-            // Calculates HeadBob speed during crouched movement
-            else if (isCrouched)
-            {
-                timer += Time.deltaTime * (bobSpeed * speedReduction);
-            }
-            // Calculates HeadBob speed during walking
             else
             {
-                timer += Time.deltaTime * bobSpeed;
+                if (sprintingAudioSource.isPlaying)
+                {
+                    sprintingAudioSource.Stop();
+                }
             }
-            // Applies HeadBob movement
-            joint.localPosition = new Vector3(jointOriginalPos.x + Mathf.Sin(timer) * bobAmount.x, jointOriginalPos.y + Mathf.Sin(timer) * bobAmount.y, jointOriginalPos.z + Mathf.Sin(timer) * bobAmount.z);
-        }
-        else
-        {
-            // Resets when play stops moving
-            timer = 0;
-            joint.localPosition = new Vector3(Mathf.Lerp(joint.localPosition.x, jointOriginalPos.x, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.y, jointOriginalPos.y, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.z, jointOriginalPos.z, Time.deltaTime * bobSpeed));
+
+            // Walking sound
+            if (isWalking && !isSprinting && isGrounded && walkingClip != null)
+            {
+                if (!walkingAudioSource.isPlaying)
+                {
+                    walkingAudioSource.clip = walkingClip;
+                    walkingAudioSource.loop = true;
+                    walkingAudioSource.Play();
+                }
+            }
+            else
+            {
+                if (walkingAudioSource.isPlaying)
+                {
+                    walkingAudioSource.Stop();
+                }
+            }
         }
     }
 }
+ 
