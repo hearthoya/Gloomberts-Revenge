@@ -2,24 +2,45 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    Transform door;
+    public float rotationSpeed = 90f;
+    public float detectionRadius = 1.5f;
+    public LayerMask detectionLayer;
+
     public bool isOpened = false;
-    public float rotationSpeed = 90f; // Degrees per second
     private Quaternion closedRotation;
     private Quaternion openRotation;
 
     void Start()
     {
-        door = this.transform;
-        closedRotation = door.rotation;
-        openRotation = Quaternion.Euler(door.eulerAngles + new Vector3(0, 90, 0)); // Rotate 90 degrees on Y axis
+        closedRotation = transform.rotation;
+        openRotation = Quaternion.Euler(transform.eulerAngles + new Vector3(0, 90, 0));
     }
 
     void Update()
     {
         Quaternion targetRotation = isOpened ? openRotation : closedRotation;
-        door.rotation = Quaternion.RotateTowards(door.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+        CheckForPlayer();
     }
 
-    
+    void CheckForPlayer()
+    {
+        Collider[] hits = Physics.OverlapSphere(transform.position, detectionRadius, detectionLayer);
+
+        foreach (Collider hit in hits)
+        {
+            if (hit.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+            {
+                isOpened = !isOpened;
+                break;
+            }
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, detectionRadius);
+    }
 }

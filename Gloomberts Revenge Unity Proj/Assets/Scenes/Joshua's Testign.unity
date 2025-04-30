@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 97853407}
   - component: {fileID: 97853406}
   - component: {fileID: 97853405}
-  - component: {fileID: 97853404}
+  - component: {fileID: 97853409}
   m_Layer: 0
   m_Name: OpenandClosingDoor
   m_TagString: Untagged
@@ -144,20 +144,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &97853404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97853403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cbf1747c7eab564f82d421adbda8ff7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOpened: 0
-  rotationSpeed: 90
 --- !u!65 &97853405
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -247,7 +233,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -0.938, z: 0}
---- !u!21 &253869692
+--- !u!114 &97853409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97853403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbf1747c7eab564f82d421adbda8ff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOpened: 0
+  rotationSpeed: 90
+--- !u!21 &148288424
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
