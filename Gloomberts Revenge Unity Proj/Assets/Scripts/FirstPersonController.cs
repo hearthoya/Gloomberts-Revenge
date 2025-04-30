@@ -125,11 +125,7 @@ public class FirstPersonController : MonoBehaviour
     // Key Variables
     [Tooltip("Key Settings")]
     public KeyCode interactKey = KeyCode.E;
-    private GameObject nearbyKey;
     public float pickupRange = 3f;
-    bool hasKey = false;
-    public Image keyIcon;
-    private GameObject door;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -144,10 +140,6 @@ public class FirstPersonController : MonoBehaviour
         {
             sprintRemaining = sprintDuration;
             sprintCooldownReset = sprintCooldown;
-        }
-        if (keyIcon != null)
-        {
-            keyIcon.enabled = false;
         }
     }
 
@@ -307,20 +299,11 @@ public class FirstPersonController : MonoBehaviour
             HeadBob();
         }
         // Key Pickup Logic
-        if (nearbyKey != null)
+        if (Input.GetKeyUp(interactKey))
         {
-            float distance = Vector3.Distance(transform.position, nearbyKey.transform.position);
-            if (distance <= pickupRange && Input.GetKeyDown(interactKey))
-            {
-                PickupKey();
-            }
-        }
-        if (door != null)
-        {
-            float distance = Vector3.Distance(transform.position, door.transform.position);
-            if (distance <= 1 && Input.GetKeyDown(KeyCode.E) && hasKey)
-            {
-                openDoor();
+            GameObject item = CheckItems();
+            if (item != null) {
+                MapManager.ItemCheck(item);
             }
         }
 
@@ -448,23 +431,6 @@ public class FirstPersonController : MonoBehaviour
             isGrounded = false;
         }
     }
-    private void PickupKey()
-    {
-        Debug.Log("Key picked up!");
-        hasKey = true;
-        if (keyIcon != null)
-        {
-            keyIcon.enabled = true;
-        }
-        Destroy(nearbyKey);
-
-    }
-    private void openDoor()
-    {
-        Debug.Log("Door Opened");
-        Destroy(door);
-
-    }
 
     private void Jump()
     {
@@ -483,29 +449,37 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Key"))
-        {
-            nearbyKey = other.gameObject;
-        }
-        if (other.CompareTag("Door"))
-        {
-            door = other.gameObject;
-        }
-    }
+    public GameObject CheckItems () {
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Key") && other.gameObject == nearbyKey)
+        // Get the player's position (origin of the spherecast)
+        Vector3 origin = transform.position;
+        float sphereRadius = 0.75f;
+
+    // Perform the sphere overlap (without direction)
+    Collider[] hitColliders = Physics.OverlapSphere(origin, sphereRadius);
+
+        foreach (var collider in hitColliders)
         {
-            nearbyKey = null;
+            if (collider.CompareTag("Key"))
+            {
+                Debug.Log("Found object with the tag: Key");
+                // You can interact with the object here
+                return collider.gameObject;
+            }
+            if (collider.CompareTag("Locked Door"))
+            {
+                Debug.Log("Found object with the tag: Locked Door");
+                return collider.gameObject;
+            }
+            if (collider.CompareTag("Door"))
+            {
+                Debug.Log("Found object with the tag: Door");
+                return collider.gameObject;
+            }
         }
-        if (other.CompareTag("Door") && other.gameObject == door)
-        {
-            door = null;
-        }
+        return null;
     }
+    
 
 
 

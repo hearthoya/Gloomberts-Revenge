@@ -21,11 +21,5 @@ public class DoorController : MonoBehaviour
         door.rotation = Quaternion.RotateTowards(door.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-    void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
-        {
-            isOpened = !isOpened;
-        }
-    }
+    
 }
