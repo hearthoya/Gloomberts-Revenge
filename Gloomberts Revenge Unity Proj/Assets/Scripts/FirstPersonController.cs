@@ -9,10 +9,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-#if UNITY_EDITOR
-using UnityEditor;
-using System.Net;
-#endif
+//#if UNITY_EDITOR
+//using UnityEditor;
+//using System.Net;
+//#endif
 
 public class FirstPersonController : MonoBehaviour
 {
@@ -38,7 +38,6 @@ public class FirstPersonController : MonoBehaviour
     public float mouseSensitivity = 2f;
     public float maxLookAngle = 50f;
 
-    [Tooltip("Crosshair Settings")]
     // Crosshair
     public bool lockCursor = true;
     public bool crosshair = true;
@@ -51,21 +50,9 @@ public class FirstPersonController : MonoBehaviour
     private float pitch = 0.0f;
     private Image crosshairObject;
 
-    #region Camera Zoom Variables
-    [Tooltip("Zoom Settings")]
-    public bool enableZoom = true;
-    public bool holdToZoom = false;
-    public KeyCode zoomKey = KeyCode.Mouse1;
-    public float zoomFOV = 30f;
-    public float zoomStepTime = 5f;
 
-    // Internal Variables
-    private bool isZoomed = false;
 
-    #endregion
-    #endregion
-
-    #region Movement Variables
+    // Movement Variables
     [Tooltip("Movement Variables")]
     public bool playerCanMove = true;
     public float walkSpeed = 5f;
@@ -74,7 +61,7 @@ public class FirstPersonController : MonoBehaviour
     // Internal Variables
     private bool isWalking = false;
 
-    #region Sprint
+    // Sprint
 
     public bool enableSprint = true;
     public bool unlimitedSprint = false;
@@ -102,9 +89,7 @@ public class FirstPersonController : MonoBehaviour
     private bool isSprintCooldown = false;
     private float sprintCooldownReset;
 
-    #endregion
-
-    #region Jump
+    // Jump
     [Tooltip("Jump Settings")]
     public bool enableJump = true;
     public KeyCode jumpKey = KeyCode.Space;
@@ -114,9 +99,7 @@ public class FirstPersonController : MonoBehaviour
     // Internal Variables
     private bool isGrounded = false;
 
-    #endregion
-
-    #region Crouch
+    // Crouch
     [Tooltip("Crouch Settings")]
     public bool enableCrouch = true;
     public bool holdToCrouch = true;
@@ -128,10 +111,7 @@ public class FirstPersonController : MonoBehaviour
     private bool isCrouched = false;
     private Vector3 originalScale;
 
-    #endregion
-    #endregion
-
-    #region Head Bob
+    // Head Bob
     [Tooltip("Head Bob Settings")]
     public bool enableHeadBob = true;
     public Transform joint;
@@ -142,21 +122,17 @@ public class FirstPersonController : MonoBehaviour
     private Vector3 jointOriginalPos;
     private float timer = 0;
 
-    #endregion
-
-    #region Key Variables
+    // Key Variables
     [Tooltip("Key Settings")]
     public KeyCode interactKey = KeyCode.E;
     private GameObject nearbyKey;
     public float pickupRange = 3f;
     bool hasKey = false;
     public Image keyIcon;
-    #endregion
     private GameObject door;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-
         crosshairObject = GetComponentInChildren<Image>();
 
         // Set internal variables
@@ -177,6 +153,7 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
+        // Crosshair
         if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -192,7 +169,7 @@ public class FirstPersonController : MonoBehaviour
             crosshairObject.gameObject.SetActive(false);
         }
 
-        #region Sprint Bar
+        // Sprint Bar
 
         sprintBarCG = GetComponentInChildren<CanvasGroup>();
 
@@ -215,16 +192,12 @@ public class FirstPersonController : MonoBehaviour
                 sprintBarCG.alpha = 0;
             }
         }
-
-
-        #endregion
     }
 
     float camRotation;
 
     private void Update()
     {
-        #region Camera
 
         // Control camera movement
         if (cameraCanMove)
@@ -248,59 +221,12 @@ public class FirstPersonController : MonoBehaviour
             playerCamera.transform.localEulerAngles = new Vector3(pitch, 0, 0);
         }
 
-        #region Camera Zoom
-
-        if (enableZoom)
-        {
-            // Changes isZoomed when key is pressed
-            // Behavior for toogle zoom
-            if (Input.GetKeyDown(zoomKey) && !holdToZoom && !isSprinting)
-            {
-                if (!isZoomed)
-                {
-                    isZoomed = true;
-                }
-                else
-                {
-                    isZoomed = false;
-                }
-            }
-
-            // Changes isZoomed when key is pressed
-            // Behavior for hold to zoom
-            if (holdToZoom && !isSprinting)
-            {
-                if (Input.GetKeyDown(zoomKey))
-                {
-                    isZoomed = true;
-                }
-                else if (Input.GetKeyUp(zoomKey))
-                {
-                    isZoomed = false;
-                }
-            }
-
-            // Lerps camera.fieldOfView to allow for a smooth transistion
-            if (isZoomed)
-            {
-                playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, zoomFOV, zoomStepTime * Time.deltaTime);
-            }
-            else if (!isZoomed && !isSprinting)
-            {
-                playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, fov, zoomStepTime * Time.deltaTime);
-            }
-        }
-
-        #endregion
-        #endregion
-
-        #region Sprint
+        // Sprint
 
         if (enableSprint)
         {
             if (isSprinting)
             {
-                isZoomed = false;
                 playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, sprintFOV, sprintFOVStepTime * Time.deltaTime);
 
                 // Drain sprint remaining while sprinting
@@ -343,9 +269,7 @@ public class FirstPersonController : MonoBehaviour
             }
         }
 
-        #endregion
-
-        #region Jump
+        // Jump
 
         // Gets input and calls jump method
         if (enableJump && Input.GetKeyDown(jumpKey) && isGrounded)
@@ -353,9 +277,9 @@ public class FirstPersonController : MonoBehaviour
             Jump();
         }
 
-        #endregion
+        
 
-        #region Crouch
+        // Crouch
 
         if (enableCrouch)
         {
@@ -375,8 +299,6 @@ public class FirstPersonController : MonoBehaviour
                 Crouch();
             }
         }
-
-        #endregion
 
         CheckGround();
 
@@ -406,7 +328,7 @@ public class FirstPersonController : MonoBehaviour
 
     void FixedUpdate()
     {
-        #region Movement
+        // Movement
 
         if (playerCanMove)
         {
