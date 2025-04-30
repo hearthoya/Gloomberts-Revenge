@@ -4375,14 +4375,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 141253440}
     m_Modifications:
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 23800000, guid: 08de2880ce64e3e428ba20b4950eac5d, type: 2}
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_GenerateLinks
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4019415352217578899, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
       propertyPath: m_Name
       value: Floor_Plane (1)
@@ -5550,14 +5542,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1677938051}
     m_Modifications:
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 23800000, guid: 06d5ac015295b49458d3c317c4a021f6, type: 2}
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_GenerateLinks
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4019415352217578899, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
       propertyPath: m_Name
       value: Flor_Plane (3)
@@ -5905,6 +5889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 762490010}
   - component: {fileID: 762490009}
+  - component: {fileID: 762490011}
   m_Layer: 0
   m_Name: Map Manager
   m_TagString: Untagged
@@ -5928,7 +5913,11 @@ MonoBehaviour:
   playerSpawn: {x: 70, y: 1, z: 37}
   gloombertPrefab: {fileID: 8281920180139184387, guid: 7b9fa3405ea1e184882b6aa1421e0552, type: 3}
   gloomSpawn: {x: 9.59502, y: 2.6, z: -55.864124}
-  keys: []
+  navMeshSurfaceObject: {fileID: 1342673680}
+  keyPrefab: {fileID: 0}
+  doorPrefab: {fileID: 0}
+  yellowDoorSpawn: {x: 0, y: 0, z: 0}
+  yellowKeySpawn: {x: 0, y: 0, z: 0}
 --- !u!4 &762490010
 Transform:
   m_ObjectHideFlags: 0
@@ -5944,6 +5933,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &762490011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762490008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbcfdbeb50102b42891603cfb186f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &764328611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7532,14 +7533,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 141253440}
     m_Modifications:
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 23800000, guid: ac106595f3724ab45bfa53e1eba6cc80, type: 2}
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_GenerateLinks
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4019415352217578899, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
       propertyPath: m_Name
       value: Floor_Plane (2)
@@ -8649,14 +8642,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1677938051}
     m_Modifications:
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 23800000, guid: 7fdd0751fd8b8cf46bc04addfa1136ad, type: 2}
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_GenerateLinks
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4019415352217578899, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
       propertyPath: m_Name
       value: Floor_Plane (1)
@@ -8723,14 +8708,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1480043093}
     m_Modifications:
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 23800000, guid: 6b2f7668a3c4d3a4dac5a3d761b570d1, type: 2}
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_GenerateLinks
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4019415352217578899, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
       propertyPath: m_Name
       value: Floor_Plane (1)
@@ -9172,14 +9149,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 141253440}
     m_Modifications:
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 23800000, guid: ce3754cde62c7ec44974515bd24760d1, type: 2}
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_GenerateLinks
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4019415352217578899, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
       propertyPath: m_Name
       value: Floor_Plane (3)
@@ -10339,6 +10308,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9034464262094696823, guid: 6e44c86d8315dc9478915194c886fb71, type: 3}
   m_PrefabInstance: {fileID: 1331397406}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1342673680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1342673682}
+  - component: {fileID: 1342673681}
+  m_Layer: 0
+  m_Name: NavMesh Surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1342673681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342673680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 1
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
+--- !u!4 &1342673682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342673680}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1348118091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10685,14 +10718,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 616475978}
     m_Modifications:
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 23800000, guid: 91bd93321d909fb46b5e250d7709d5e0, type: 2}
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_GenerateLinks
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4019415352217578899, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
       propertyPath: m_Name
       value: Floor_Plane (3)
@@ -12178,14 +12203,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1677938051}
     m_Modifications:
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 23800000, guid: 376b82565ab350346afb04271eb1ccc1, type: 2}
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_GenerateLinks
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4019415352217578899, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
       propertyPath: m_Name
       value: Flor_Plane (2)
@@ -12733,14 +12750,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1677938051}
     m_Modifications:
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_GenerateLinks
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4019415352217578899, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
       propertyPath: m_Name
       value: Floor_Plane
@@ -14489,14 +14498,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 616475978}
     m_Modifications:
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 23800000, guid: b0717c630c41c23419b214f1298b1d6b, type: 2}
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_GenerateLinks
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4019415352217578899, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
       propertyPath: m_Name
       value: Floor_Plane (2)
@@ -15308,22 +15309,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 336116718}
     m_Modifications:
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 23800000, guid: cf7fb79c93d2bd34287e8e58d555c975, type: 2}
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_GenerateLinks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_CollectObjects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2779712121370104135, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
-      propertyPath: m_LayerMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 4019415352217578899, guid: aa6ccfb9216881a47b152735424dcf75, type: 3}
       propertyPath: m_Name
       value: Floor_Plane
@@ -16115,3 +16100,4 @@ SceneRoots:
   - {fileID: 336116718}
   - {fileID: 762490010}
   - {fileID: 1677938051}
+  - {fileID: 1342673682}

@@ -20,27 +20,8 @@ public class DoorController : MonoBehaviour
     {
         Quaternion targetRotation = isOpened ? openRotation : closedRotation;
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-        CheckForPlayer();
     }
 
-    void CheckForPlayer()
-    {
-        Collider[] hits = Physics.OverlapSphere(transform.position, detectionRadius, detectionLayer);
 
-        foreach (Collider hit in hits)
-        {
-            if (hit.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
-            {
-                isOpened = !isOpened;
-                break;
-            }
-        }
-    }
 
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, detectionRadius);
-    }
 }
