@@ -8,7 +8,6 @@ public class DoorController : MonoBehaviour
     private Quaternion closedRotation;
     private Quaternion openRotation;
 
-
     void Start()
     {
         door = this.transform;
@@ -16,16 +15,15 @@ public class DoorController : MonoBehaviour
         openRotation = Quaternion.Euler(door.eulerAngles + new Vector3(0, 90, 0)); // Rotate 90 degrees on Y axis
     }
 
-
     void Update()
     {
         Quaternion targetRotation = isOpened ? openRotation : closedRotation;
         door.rotation = Quaternion.RotateTowards(door.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-    void OnTriggerStay(Collider other)
+    void OnCollisionStay(Collision collision)
     {
-        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
         {
             isOpened = !isOpened;
         }
