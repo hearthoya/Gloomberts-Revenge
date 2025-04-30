@@ -37,7 +37,4 @@ public class NextBotAI : MonoBehaviour
             nextBotAgent.SetDestination(playerTransform.position);
         }
     }
-    // bro dis really the simplest AI ever honestly if you can call it an AI but it does the job why
-    // am I typing this? Nobody is gonna read this.
-    // He He Funny monkey
 }
