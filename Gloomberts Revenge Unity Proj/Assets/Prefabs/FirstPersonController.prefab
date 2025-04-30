@@ -153,6 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90ba6530d9bfda47abb4610956b2f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walk: {fileID: 8300000, guid: 47f8e2e3f99f2864199d85ed1a71d78b, type: 3}
+  sprint: {fileID: 8300000, guid: 21e61bad593b4fd4d9a2d55985157c4f, type: 3}
+  jump: {fileID: 8300000, guid: 63a593594cc168f44bb3163f96da2780, type: 3}
   playerCamera: {fileID: 4459864851310106426}
   fov: 90
   invertCamera: 0
@@ -203,10 +206,6 @@ MonoBehaviour:
   interactKey: 101
   pickupRange: 3
   keyIcon: {fileID: 0}
-  footstepAudioSource: {fileID: 0}
-  walkSound: {fileID: 8300000, guid: 47f8e2e3f99f2864199d85ed1a71d78b, type: 3}
-  sprintSound: {fileID: 8300000, guid: 21e61bad593b4fd4d9a2d55985157c4f, type: 3}
-  footstepInterval: 0.5
 --- !u!82 &-3792584630072734730
 AudioSource:
   m_ObjectHideFlags: 0

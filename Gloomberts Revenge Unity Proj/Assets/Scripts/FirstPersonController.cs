@@ -18,6 +18,13 @@ public class FirstPersonController : MonoBehaviour
 {
     private Rigidbody rb;
 
+    [Header("Audio Settings")]
+    public AudioClip walk;
+    public AudioClip sprint;
+    public AudioClip jump;
+
+    private AudioSource movementAudioSource;
+
     #region Camera Movement Variables
     [Tooltip("Camera Settings")]
     public Camera playerCamera;
@@ -163,6 +170,11 @@ public class FirstPersonController : MonoBehaviour
         {
             keyIcon.enabled = false;
         }
+
+        //init audio
+        movementAudioSource = gameObject.AddComponent<AudioSource>();
+        movementAudioSource.loop = true;
+        movementAudioSource.playOnAwake = false;
     }
 
     void Start()
@@ -403,10 +415,45 @@ public class FirstPersonController : MonoBehaviour
             // Calculate how fast we should be moving
             Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
+            bool isMoving = targetVelocity.x != 0 || targetVelocity.z != 0;
+bool onGround = isGrounded;
+AudioClip targetClip = null;
+
+if (isMoving && onGround)
+{
+    if (Input.GetKey(sprintKey) && enableSprint && sprintRemaining > 0f && !isSprintCooldown)
+    {
+        targetClip = sprint;
+    }
+    else
+    {
+        targetClip = walk;
+    }
+
+    if (movementAudioSource.clip != targetClip)
+    {
+        movementAudioSource.clip = targetClip;
+        movementAudioSource.Play();
+    }
+    else if (!movementAudioSource.isPlaying)
+    {
+        movementAudioSource.Play();
+    }
+}
+else
+{
+    if (movementAudioSource.isPlaying)
+    {
+        movementAudioSource.Stop();
+    }
+}
+
+
             // Checks if player is walking and isGrounded
             // Will allow head bob
             if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
+                AudioSource.PlayClipAtPoint(walk, transform.position);
                 isWalking = true;
             }
             else
@@ -509,17 +556,20 @@ public class FirstPersonController : MonoBehaviour
 
     private void Jump()
     {
-        // Adds force to the player rigidbody to jump
-        if (isGrounded)
+        if (enableJump && Input.GetKeyDown(jumpKey) && isGrounded)
         {
-            rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
             isGrounded = false;
-        }
 
-        // When crouched and using toggle system, will uncrouch for a jump
-        if(isCrouched && !holdToCrouch)
-        {
-            Crouch();
+            if (movementAudioSource.isPlaying)
+            {
+                movementAudioSource.Stop();
+            }
+
+            if (jump != null)
+            {
+                AudioSource.PlayClipAtPoint(jump, transform.position);
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
