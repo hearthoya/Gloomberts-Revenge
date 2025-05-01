@@ -3,25 +3,24 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     public float rotationSpeed = 90f;
-    public float detectionRadius = 1.5f;
-    public LayerMask detectionLayer;
-
     public bool isOpened = false;
-    private Quaternion closedRotation;
-    private Quaternion openRotation;
+    public Transform hingePoint; // Assign this in the Inspector
 
-    void Start()
-    {
-        closedRotation = transform.rotation;
-        openRotation = Quaternion.Euler(transform.eulerAngles + new Vector3(0, 90, 0));
-    }
+    private float currentYRotation = 0f;
 
     void Update()
     {
-        Quaternion targetRotation = isOpened ? openRotation : closedRotation;
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        float targetAngle = isOpened ? 90f : 0f;
+        float step = rotationSpeed * Time.deltaTime;
+        float newYRotation = Mathf.MoveTowards(currentYRotation, targetAngle, step);
+        float deltaRotation = newYRotation - currentYRotation;
+
+        // Rotate around the hinge point on the Y axis
+        if (hingePoint != null)
+        {
+            transform.RotateAround(hingePoint.position, Vector3.up, deltaRotation);
+        }
+
+        currentYRotation = newYRotation;
     }
-
-
-
 }
