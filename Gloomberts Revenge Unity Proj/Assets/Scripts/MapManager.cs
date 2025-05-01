@@ -23,26 +23,39 @@ public class MapManager : MonoBehaviour
     static NavMeshSurface surface;
     static bool inScene;
 
-    [Header("Doors and Keys Stuff")]
-    public GameObject keyPrefab;
+    [Header("Doors Stuff")]
     public GameObject doorPrefab;
     static Dictionary<int, List<GameObject>> keysToDoors;
 
     // All Locked Doors
     public Vector3 greenDoorSpawn;
+    public Quaternion greenDoorRotation;
     GameObject yellowDoor;
     public Vector3 yellowDoorSpawn;
+    public Quaternion yellowDoorRotation;
     public Vector3 blueDoorSpawn1;
+    public Quaternion blueDoorRotation1;
     public Vector3 blueDoorSpawn2;
+    public Quaternion blueDoorRotation2;
     public Vector3 purpleDoorSpawn;
+    public Quaternion purpleDoorRotation;
     public Vector3 cyanDoorSpawn1;
+    public Quaternion cyanDoorRotation1;
     public Vector3 cyanDoorSpawn2;
+    public Quaternion cyanDoorRotation2;
     public Vector3 redDoorSpawn;
+    public Quaternion redDoorRotation;
     public Vector3 blackDoorSpawn;
+    public Quaternion blackDoorRotation;
 
     // All Keys
+
+    [Header("Keys")]
+    public GameObject keyPrefab;
     static List<GameObject> keys;
     static List<bool> pickedKeys;
+
+    public Vector3 greenKeySpawn;
     public Vector3 yellowKeySpawn;
 
     [Header("Vent Stuff")]
@@ -54,7 +67,10 @@ public class MapManager : MonoBehaviour
     public Vector3 screwDriverSpawn;
     public static bool pickedScrewdriver;
 
-    public Vector3 ventStartBig;
+    public Vector3 ventStartBigSpawn;
+    public Quaternion ventStartBigRotation;
+    public Vector3 ventBigStartSpawn;
+    public Quaternion ventBigStartRotation;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -76,8 +92,7 @@ public class MapManager : MonoBehaviour
 
         // Yellow
         
-        yellowDoor = Instantiate(doorPrefab, yellowDoorSpawn, Quaternion.identity);
-        yellowDoor.tag = "Locked Door";
+        yellowDoor = Instantiate(doorPrefab, yellowDoorSpawn, yellowDoorRotation);
         yellowDoor.GetComponent<Renderer>().material.color = Color.yellow;
         List<GameObject> yellowDoors = new List<GameObject>() {yellowDoor};
         GameObject yellowKey = Instantiate(keyPrefab, yellowKeySpawn, Quaternion.identity);
@@ -86,10 +101,21 @@ public class MapManager : MonoBehaviour
         pickedKeys.Add(false);
         keys.Add(yellowKey);
 
+        // Green
+        GameObject greenDoor = Instantiate(doorPrefab, greenDoorSpawn, greenDoorRotation);
+        greenDoor.GetComponent<Renderer>().material.color = Color.green;
+        List<GameObject> greenDoors = new List<GameObject>() { greenDoor };
+        GameObject greenKey = Instantiate(keyPrefab, greenKeySpawn, Quaternion.identity);
+        greenKey.GetComponent<Renderer>().material.color = Color.green;
+        keysToDoors.Add(1, greenDoors);
+        pickedKeys.Add(false);
+        keys.Add(greenKey);
+
         screwdriver = Instantiate(screwdriverPrefab, screwDriverSpawn, Quaternion.identity);
         pickedScrewdriver = false;
 
-        vents.Add(Instantiate(ventPrefab, ventStartBig, Quaternion.identity));
+        vents.Add(Instantiate(ventPrefab, ventStartBigSpawn, ventStartBigRotation));
+        vents.Add(Instantiate(ventPrefab, ventBigStartSpawn, ventBigStartRotation));
 
     }
 
@@ -113,12 +139,15 @@ public class MapManager : MonoBehaviour
                 if (!pickedKeys[i])
                 {
                     GameObject key = keys[i];
-                    Vector3 pos = key.transform.position;
-                    if (Vector3.Distance(pos, item.transform.position) < 0.01f)
+                    if (key != null)
                     {
-                        keys[i] = null;
-                        pickedKeys[i] = true;
-                        Destroy(key);
+                        Vector3 pos = key.transform.position;
+                        if (Vector3.Distance(pos, item.transform.position) < 0.01f)
+                        {
+                            keys[i] = null;
+                            pickedKeys[i] = true;
+                            Destroy(key);
+                        }
                     }
                 }
             }
@@ -134,12 +163,14 @@ public class MapManager : MonoBehaviour
                     for (int j = 0; j < doors.Count; j++)
                     {
                         GameObject door = doors[j];
-                        Vector3 pos = door.transform.position;
-                        if (Vector3.Distance(pos, item.transform.position) < 0.01f && keys[i] == null)
-                        {
-                            doors[i] = null;
-                            Destroy(door);
-                            UpdateNavMesh();
+                        if (door != null) {
+                            Vector3 pos = door.transform.position;
+                            if (Vector3.Distance(pos, item.transform.position) < 0.01f && keys[i] == null)
+                            {
+                                doors[j] = null;
+                                Destroy(door);
+                                UpdateNavMesh();
+                            }
                         }
                     }
                 }
