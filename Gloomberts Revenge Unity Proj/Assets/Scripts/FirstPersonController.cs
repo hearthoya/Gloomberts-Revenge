@@ -476,6 +476,16 @@ public class FirstPersonController : MonoBehaviour
                 Debug.Log("Found object with the tag: Door");
                 return collider.gameObject;
             }
+            if (collider.CompareTag("Vent"))
+            {
+                Debug.Log("Found object with the tag: Vent");
+                return collider.gameObject;
+            }
+            if (collider.CompareTag("Screwdriver"))
+            {
+                Debug.Log("Found object with the tag: Screwdriver");
+                return collider.gameObject;
+            }
         }
         return null;
     }

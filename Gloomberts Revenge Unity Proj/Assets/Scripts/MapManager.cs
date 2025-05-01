@@ -21,6 +21,7 @@ public class MapManager : MonoBehaviour
     GameObject gloombert = null;
     public GameObject navMeshSurfaceObject;
     static NavMeshSurface surface;
+    static bool inScene;
 
     [Header("Door Stuff")]
     public GameObject keyPrefab;
@@ -37,23 +38,44 @@ public class MapManager : MonoBehaviour
     GameObject yellowKey;
     public Vector3 yellowKeySpawn;
 
+    [Header("Vent Stuff")]
+    public GameObject ventPrefab;
+    static List<GameObject> vents;
+
+    public GameObject screwdriverPrefab;
+    public static GameObject screwdriver;
+    public Vector3 screwDriverSpawn;
+    public static bool pickedScrewdriver;
+
+    public Vector3 ventStartBig;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         keys = new List<GameObject>();
         doors = new List<GameObject>();
+        vents = new List<GameObject>();
+        inScene = false;
+
         surface = navMeshSurfaceObject.GetComponent<NavMeshSurface>();
         surface.BuildNavMesh();
+
+        gloombert = Instantiate(gloombertPrefab, gloomSpawn, Quaternion.identity);
         playerObject = Instantiate(playerPrefab, playerSpawn, Quaternion.identity);
         firstPersonController = playerObject.GetComponent<FirstPersonController>();
-        gloombert = Instantiate(gloombertPrefab, gloomSpawn, Quaternion.identity);
+
+
         yellowKey = Instantiate(keyPrefab, yellowKeySpawn, Quaternion.identity);
         yellowDoor = Instantiate(doorPrefab, yellowDoorSpawn, Quaternion.identity);
         yellowDoor.tag = "Locked Door";
         keys.Add(yellowKey);
         doors.Add(yellowDoor);
 
+        screwdriver = Instantiate(screwdriverPrefab, screwDriverSpawn, Quaternion.identity);
+        pickedScrewdriver = false;
+
+        vents.Add(Instantiate(ventPrefab, ventStartBig, Quaternion.identity));
 
     }
 
@@ -100,6 +122,7 @@ public class MapManager : MonoBehaviour
                         doors[i] = null;
                         Destroy(door);
                         UpdateNavMesh();
+                        CheckIfSpawn();
                     }
                 }
             }
@@ -111,6 +134,31 @@ public class MapManager : MonoBehaviour
             CoroutineRunner.Instance.RunWaitCoroutine();
             UpdateNavMesh();
         }
+        if (item.CompareTag("Vent")) {
+            for (int i = 0; i < vents.Count; i++)
+            {
+                GameObject vent = vents[i];
+                if (vent != null)
+                {
+                    Vector3 pos = vent.transform.position;
+                    if (Vector3.Distance(pos, item.transform.position) < 0.01f && pickedScrewdriver)
+                    {
+                        doors[i] = null;
+                        Destroy(vent);
+                        UpdateNavMesh();
+                    }
+                }
+            }
+        }
+        if (item.CompareTag("Screwdriver"))
+        {
+            Destroy(screwdriver);
+            pickedScrewdriver = true;
+        }
+    }
 
+    static void CheckIfSpawn()
+    {
+        if (!inScene) { }
     }
 }
