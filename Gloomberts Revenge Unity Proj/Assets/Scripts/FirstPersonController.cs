@@ -452,7 +452,7 @@ public class FirstPersonController : MonoBehaviour
 
         // Get the player's position (origin of the spherecast)
         Vector3 origin = transform.position;
-        float sphereRadius = 0.75f;
+        float sphereRadius = 0.9f;
 
     // Perform the sphere overlap (without direction)
     Collider[] hitColliders = Physics.OverlapSphere(origin, sphereRadius);
