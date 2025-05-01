@@ -1,0 +1,640 @@
+Using pre-set license
+Built from '6000.0/staging' branch; Version is '6000.0.34f1 (5ab2d9ed9190) revision 5944025'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'en' Physical Memory: 16307 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.0.34f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/henry/OneDrive/Desktop/Gloomberts-Revenge/Gloomberts Revenge Unity Proj
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+64498
+-job-worker-count
+7
+-background-job-worker-count
+8
+-gc-helper-count
+1
+Successfully changed project path to: C:/Users/henry/OneDrive/Desktop/Gloomberts-Revenge/Gloomberts Revenge Unity Proj
+C:/Users/henry/OneDrive/Desktop/Gloomberts-Revenge/Gloomberts Revenge Unity Proj
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [19916]  Target information:
+
+Player connection [19916]  * "[IP] 172.16.8.2 [Port] 0 [Flags] 2 [Guid] 2835689184 [EditorId] 2835689184 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EVLH4F1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [19916] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [19916] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 2.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.34f1 (5ab2d9ed9190)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/henry/OneDrive/Desktop/Gloomberts-Revenge/Gloomberts Revenge Unity Proj/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2080 (ID=0x1e82)
+    Vendor:   NVIDIA
+    VRAM:     7987 MB
+    Driver:   32.0.15.7628
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56444
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003505 seconds.
+- Loaded All Assemblies, in  0.357 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.303 seconds
+Domain Reload Profiling: 657ms
+	BeginReloadAssembly (124ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (138ms)
+		LoadAssemblies (121ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (135ms)
+			TypeCache.Refresh (134ms)
+				TypeCache.ScanAssembly (123ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (303ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (256ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (23ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (50ms)
+			ProcessInitializeOnLoadAttributes (132ms)
+			ProcessInitializeOnLoadMethodAttributes (47ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.800 seconds
+Refreshing native plugins compatible for Editor in 1.35 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.641 seconds
+Domain Reload Profiling: 1435ms
+	BeginReloadAssembly (162ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (548ms)
+		LoadAssemblies (344ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (301ms)
+			TypeCache.Refresh (203ms)
+				TypeCache.ScanAssembly (189ms)
+			BuildScriptInfoCaches (85ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (641ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (535ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (113ms)
+			ProcessInitializeOnLoadAttributes (357ms)
+			ProcessInitializeOnLoadMethodAttributes (52ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 2.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 185 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6251 unused Assets / (28.3 MB). Loaded Objects now: 6824.
+Memory consumption went from 167.3 MB to 139.0 MB.
+Total: 13.332900 ms (FindLiveObjects: 1.075500 ms CreateObjectMapping: 0.839700 ms MarkObjects: 6.958600 ms  DeleteObjects: 4.458100 ms)
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.801 seconds
+Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.662 seconds
+Domain Reload Profiling: 1460ms
+	BeginReloadAssembly (197ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (49ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (525ms)
+		LoadAssemblies (393ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (232ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (212ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (663ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (546ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (119ms)
+			ProcessInitializeOnLoadAttributes (365ms)
+			ProcessInitializeOnLoadMethodAttributes (49ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 1.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6249 unused Assets / (8.3 MB). Loaded Objects now: 6826.
+Memory consumption went from 135.9 MB to 127.6 MB.
+Total: 14.921100 ms (FindLiveObjects: 1.076400 ms CreateObjectMapping: 1.470500 ms MarkObjects: 7.465300 ms  DeleteObjects: 4.907500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 76901.884847 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Meshes/Bench.fbx
+  artifactKey: Guid(6f03ac7b1f1fcbc48a393fa6b533089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Meshes/Bench.fbx using Guid(6f03ac7b1f1fcbc48a393fa6b533089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a98018674e32a9d3d65976a55901e400') in 0.1598425 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Meshes/PotStack.fbx
+  artifactKey: Guid(7e5990f0d5191e842aa1a4191206e942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Meshes/PotStack.fbx using Guid(7e5990f0d5191e842aa1a4191206e942) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5d70f4ab46968b44cc6e02012eb60ea2') in 0.0215495 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Meshes/Tomato.fbx
+  artifactKey: Guid(564d4b386d760e948be9ba0f93566fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Meshes/Tomato.fbx using Guid(564d4b386d760e948be9ba0f93566fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '62d2fa201b511f766ef5f06f830c7f6b') in 0.0905437 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Meshes/Pot.fbx
+  artifactKey: Guid(21371dd6fe0354e41887111a25661da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Meshes/Pot.fbx using Guid(21371dd6fe0354e41887111a25661da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ae5c585e611d90ca16cf1fc1320b8976') in 0.0178052 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.495001 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Meshes/Coleus.fbx
+  artifactKey: Guid(0f3fc564d3d8ea646a348f41fc3b836f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Meshes/Coleus.fbx using Guid(0f3fc564d3d8ea646a348f41fc3b836f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'af93d6f9efc3dcf5d48c2a74cef29ee0') in 0.1436821 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.833 seconds
+Refreshing native plugins compatible for Editor in 1.28 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.708 seconds
+Domain Reload Profiling: 1539ms
+	BeginReloadAssembly (215ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (58ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (538ms)
+		LoadAssemblies (414ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (232ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (210ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (708ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (573ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (126ms)
+			ProcessInitializeOnLoadAttributes (373ms)
+			ProcessInitializeOnLoadMethodAttributes (59ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 2.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6249 unused Assets / (8.5 MB). Loaded Objects now: 6875.
+Memory consumption went from 140.4 MB to 132.0 MB.
+Total: 16.327100 ms (FindLiveObjects: 1.155600 ms CreateObjectMapping: 0.745900 ms MarkObjects: 8.863800 ms  DeleteObjects: 5.560400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 15.874865 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Meshes/Tomato.fbx
+  artifactKey: Guid(564d4b386d760e948be9ba0f93566fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Meshes/Tomato.fbx using Guid(564d4b386d760e948be9ba0f93566fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9b6e381241b6de99d2f129574cc34f96') in 0.2593497 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Meshes/Bench.fbx
+  artifactKey: Guid(6f03ac7b1f1fcbc48a393fa6b533089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Meshes/Bench.fbx using Guid(6f03ac7b1f1fcbc48a393fa6b533089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9d6e0d132d7f15e091dcf2405b0b8e08') in 0.0233781 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.293404 seconds.
+  path: Assets/Furniture/Prefabs/3Seat.prefab
+  artifactKey: Guid(4da9f6017c5c2954282fe23c8f297ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Furniture/Prefabs/3Seat.prefab using Guid(4da9f6017c5c2954282fe23c8f297ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '40c76ac9c161a2b2228de05e97b5b090') in 0.334679 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Furniture/Prefabs/Closet3.prefab
+  artifactKey: Guid(c24cdd6fcf1f09248832426ea5388c7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Furniture/Prefabs/Closet3.prefab using Guid(c24cdd6fcf1f09248832426ea5388c7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f9c7ed4de5521ebda42510f9cd978402') in 0.0209568 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Furniture/Prefabs/3seat4.prefab
+  artifactKey: Guid(245712dbd63f6f94e8467250c1caedd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Furniture/Prefabs/3seat4.prefab using Guid(245712dbd63f6f94e8467250c1caedd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '06f669cbdf0971ffb10bc46e21556eec') in 0.0255051 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/Bench.prefab
+  artifactKey: Guid(fa7049ea69dd1e3458a09ad4812a8536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/Bench.prefab using Guid(fa7049ea69dd1e3458a09ad4812a8536) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cc6bf49b1920302ce3cc155f0207207b') in 0.0108029 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/Cactus.prefab
+  artifactKey: Guid(fb10ecd4ab18e854e9b2b81f4e7299ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/Cactus.prefab using Guid(fb10ecd4ab18e854e9b2b81f4e7299ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bf6a86a6b00d3aa1b14d3e2a23bd0a21') in 0.0124909 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 43
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.053217 seconds.
+  path: Assets/Prefabs/Floor_Structure/Door.prefab
+  artifactKey: Guid(c26fef374f5b29045a504f875c934f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Floor_Structure/Door.prefab using Guid(c26fef374f5b29045a504f875c934f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd7fe68a11ea411f7e1589b643a6d7271') in 0.0734772 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Prefabs/Floor_Structure/Floor_Plane.prefab
+  artifactKey: Guid(aa6ccfb9216881a47b152735424dcf75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Floor_Structure/Floor_Plane.prefab using Guid(aa6ccfb9216881a47b152735424dcf75) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '796b149f977a311338365f537a4bf07a') in 0.0460727 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.365390 seconds.
+  path: Assets/Furniture/Prefabs/Fotel4.prefab
+  artifactKey: Guid(80967ac7bb2c8104b8dd5b649046d79b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Furniture/Prefabs/Fotel4.prefab using Guid(80967ac7bb2c8104b8dd5b649046d79b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c7bdf5e23ebde748fca44a187e7c40c4') in 0.0512189 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/Pot.prefab
+  artifactKey: Guid(2e85d7446665a4341aa1179dec78a3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/Pot.prefab using Guid(2e85d7446665a4341aa1179dec78a3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e7831afad7771a80202f09648595e9df') in 0.0206455 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.710448 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/PotStack.prefab
+  artifactKey: Guid(f29ff06dd21638b4f98d7a8c38b4c2f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/PotStack.prefab using Guid(f29ff06dd21638b4f98d7a8c38b4c2f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '85dc1dfa06ceb010123dda5edabbe0d7') in 0.0209347 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/TomatoGreen.prefab
+  artifactKey: Guid(c22ffa1f3450b6c42bd58e142561b142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/TomatoGreen.prefab using Guid(c22ffa1f3450b6c42bd58e142561b142) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '053bd1e34f9e3da2cce0c1e24c60f4f4') in 0.0137727 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 44
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Prefabs/Floor_Structure/Wall Vertical.prefab
+  artifactKey: Guid(4ab4ec450cd42d443a27d6b6f9111215) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Floor_Structure/Wall Vertical.prefab using Guid(4ab4ec450cd42d443a27d6b6f9111215) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5ded67a546e113200fc3e33463a7a085') in 0.017692 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.128738 seconds.
+  path: Assets/Prefabs/Floor_Structure/Door.prefab
+  artifactKey: Guid(c26fef374f5b29045a504f875c934f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Floor_Structure/Door.prefab using Guid(c26fef374f5b29045a504f875c934f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '49cfa98e83c5e97d26f04af73015dd78') in 0.0174394 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.247281 seconds.
+  path: Assets/Prefabs/Floor_Structure/Vent.prefab
+  artifactKey: Guid(4c2686ff6a29fbe4ebc86439f103062b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Floor_Structure/Vent.prefab using Guid(4c2686ff6a29fbe4ebc86439f103062b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '681a524edc8de138f87f12b6fc722ef3') in 0.0188979 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 27
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.542010 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/Bench.prefab
+  artifactKey: Guid(fa7049ea69dd1e3458a09ad4812a8536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/Bench.prefab using Guid(fa7049ea69dd1e3458a09ad4812a8536) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f45a8de091348ed3cbd39a43f27a2f9b') in 0.023427 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/Coleus03.prefab
+  artifactKey: Guid(e0036fd334e46b444994ebf436a0fa98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandoraKa/Stylized Potted Plants/Built-In/Prefabs/Coleus03.prefab using Guid(e0036fd334e46b444994ebf436a0fa98) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e04042cc726e2e2d35bd12230941ca02') in 0.1659044 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 44
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.844 seconds
+Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.733 seconds
+Domain Reload Profiling: 1573ms
+	BeginReloadAssembly (198ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (51ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (563ms)
+		LoadAssemblies (369ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (295ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (274ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (733ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (607ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (122ms)
+			ProcessInitializeOnLoadAttributes (408ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 8.18 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6249 unused Assets / (8.7 MB). Loaded Objects now: 6879.
+Memory consumption went from 140.6 MB to 131.9 MB.
+Total: 19.744200 ms (FindLiveObjects: 1.311900 ms CreateObjectMapping: 1.113700 ms MarkObjects: 11.985500 ms  DeleteObjects: 5.330800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 86.990033 seconds.
+  path: Assets/Prefabs/Gloombert.prefab
+  artifactKey: Guid(7b9fa3405ea1e184882b6aa1421e0552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Gloombert.prefab using Guid(7b9fa3405ea1e184882b6aa1421e0552) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0964f7e4084e19fb2786aeb0ef2c1c34') in 0.0819745 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.447867 seconds.
+  path: Assets/Prefabs/Gloombert.prefab
+  artifactKey: Guid(7b9fa3405ea1e184882b6aa1421e0552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Gloombert.prefab using Guid(7b9fa3405ea1e184882b6aa1421e0552) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7cbc798e08b3b47a4c3f8b48ae2d3ed8') in 0.0081691 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.787686 seconds.
+  path: Assets/Prefabs/Gloombert.prefab
+  artifactKey: Guid(7b9fa3405ea1e184882b6aa1421e0552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Gloombert.prefab using Guid(7b9fa3405ea1e184882b6aa1421e0552) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '978ddfe9bf53b0ae077f186a66d40a0e') in 0.0134837 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.203615 seconds.
+  path: Assets/Prefabs/Gloombert.prefab
+  artifactKey: Guid(7b9fa3405ea1e184882b6aa1421e0552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Gloombert.prefab using Guid(7b9fa3405ea1e184882b6aa1421e0552) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8eda2f0ab3fe51f3d28ee4dcaf48c1e6') in 0.0190425 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.800 seconds
+Refreshing native plugins compatible for Editor in 1.35 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.738 seconds
+Domain Reload Profiling: 1535ms
+	BeginReloadAssembly (192ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (47ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (525ms)
+		LoadAssemblies (387ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (233ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (213ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (739ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (607ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (137ms)
+			ProcessInitializeOnLoadAttributes (394ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 3.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6249 unused Assets / (8.2 MB). Loaded Objects now: 6884.
+Memory consumption went from 140.7 MB to 132.4 MB.
+Total: 15.077400 ms (FindLiveObjects: 1.244200 ms CreateObjectMapping: 1.125700 ms MarkObjects: 7.635600 ms  DeleteObjects: 5.070600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.783 seconds
+Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.709 seconds
+Domain Reload Profiling: 1488ms
+	BeginReloadAssembly (190ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (515ms)
+		LoadAssemblies (386ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (227ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (207ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (709ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (581ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (129ms)
+			ProcessInitializeOnLoadAttributes (376ms)
+			ProcessInitializeOnLoadMethodAttributes (61ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 2.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6249 unused Assets / (8.3 MB). Loaded Objects now: 6886.
+Memory consumption went from 140.7 MB to 132.4 MB.
+Total: 14.715000 ms (FindLiveObjects: 1.123900 ms CreateObjectMapping: 0.752800 ms MarkObjects: 7.854100 ms  DeleteObjects: 4.982700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
