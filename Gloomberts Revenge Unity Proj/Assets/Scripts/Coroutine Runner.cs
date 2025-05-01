@@ -13,6 +13,6 @@ public class CoroutineRunner : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
     }
 }

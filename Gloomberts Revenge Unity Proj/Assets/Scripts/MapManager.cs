@@ -57,6 +57,11 @@ public class MapManager : MonoBehaviour
 
     public Vector3 greenKeySpawn;
     public Vector3 yellowKeySpawn;
+    public Vector3 blueKeySpawn;
+    public Vector3 purpleKeySpawn;
+    public Vector3 cyanKeySpawn;
+    public Vector3 redKeySpawn;
+    public Vector3 blackKeySpawn;
 
     [Header("Vent Stuff")]
     public GameObject ventPrefab;
@@ -106,6 +111,28 @@ public class MapManager : MonoBehaviour
         greenDoor.GetComponent<Renderer>().material.color = Color.green;
         List<GameObject> greenDoors = new List<GameObject>() { greenDoor };
         GameObject greenKey = Instantiate(keyPrefab, greenKeySpawn, Quaternion.identity);
+        greenKey.GetComponent<Renderer>().material.color = Color.green;
+        keysToDoors.Add(1, greenDoors);
+        pickedKeys.Add(false);
+        keys.Add(greenKey);
+
+        // Blue
+        GameObject blueDoor1 = Instantiate(doorPrefab, blueDoorSpawn1, blueDoorRotation1);
+        blueDoor1.GetComponent<Renderer>().material.color = Color.blue;
+        GameObject blueDoor2 = Instantiate(doorPrefab, blueDoorSpawn2, blueDoorRotation2);
+        blueDoor2.GetComponent<Renderer>().material.color = Color.blue;
+        List<GameObject> blueDoors = new List<GameObject>() { blueDoor1, blueDoor2 };
+        GameObject blueKey = Instantiate(keyPrefab, blueKeySpawn, Quaternion.identity);
+        blueKey.GetComponent<Renderer>().material.color = Color.blue;
+        keysToDoors.Add(2, blueDoors);
+        pickedKeys.Add(false);
+        keys.Add(blueKey);
+
+        // Purple
+        GameObject purpleDoor = Instantiate(doorPrefab, purpleDoorSpawn, purpleDoorRotation);
+        purpleDoor.GetComponent<Renderer>().material.color = Color.magenta;
+        List<GameObject> purpleDoors = new List<GameObject>() { purpleDoor };
+        GameObject purpleKey = Instantiate(keyPrefab, greenKeySpawn, Quaternion.identity);
         greenKey.GetComponent<Renderer>().material.color = Color.green;
         keysToDoors.Add(1, greenDoors);
         pickedKeys.Add(false);
@@ -180,7 +207,7 @@ public class MapManager : MonoBehaviour
         {
             DoorController openedDoor = item.GetComponent<DoorController>();
             openedDoor.isOpened = !openedDoor.isOpened;
-            CoroutineRunner.Instance.RunWaitCoroutine();
+            //CoroutineRunner.Instance.RunWaitCoroutine();
             UpdateNavMesh();
         }
         if (item.CompareTag("Vent")) {
