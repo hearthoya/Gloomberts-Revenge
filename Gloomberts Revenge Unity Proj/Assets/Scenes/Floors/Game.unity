@@ -20,12 +20,12 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.1764706, g: 0.17254902, b: 0.17254902, a: 1}
-  m_AmbientEquatorColor: {r: 0.11764706, g: 0.10980392, b: 0.10980392, a: 1}
-  m_AmbientGroundColor: {r: 0.22352941, g: 0.2, b: 0.2, a: 1}
+  m_AmbientSkyColor: {r: 0.5520116, g: 0.5520116, b: 0.5520116, a: 1}
+  m_AmbientEquatorColor: {r: 0.4188679, g: 0.40069062, b: 0.40069062, a: 1}
+  m_AmbientGroundColor: {r: 0.2981131, g: 0.29642567, b: 0.29642567, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
-  m_SubtractiveShadowColor: {r: 0.3882353, g: 0.34509805, b: 0.34509805, a: 1}
+  m_SubtractiveShadowColor: {r: 0.8113208, g: 0.7332503, b: 0.7332503, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
