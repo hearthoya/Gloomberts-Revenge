@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ede45e985137a042b71640f918d76f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 5
+  sphereRadius: 1
   pushForce: 10
   visualizerColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &8281920180139184387
@@ -241,7 +241,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.1
-  m_Speed: 5.5
+  m_Speed: 5
   m_Acceleration: 9999
   avoidancePriority: 50
   m_AngularSpeed: 9999

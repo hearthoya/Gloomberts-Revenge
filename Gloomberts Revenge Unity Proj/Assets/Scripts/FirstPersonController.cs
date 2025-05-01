@@ -120,7 +120,6 @@ public class FirstPersonController : MonoBehaviour
 
     // Internal Variables
     private Vector3 jointOriginalPos;
-    private float timer = 0;
 
     // Key Variables
     [Tooltip("Key Settings")]

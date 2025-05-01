@@ -439,7 +439,7 @@ MonoBehaviour:
   sprintSpeed: 8
   sprintDuration: 5
   sprintCooldown: 0.5
-  sprintFOV: 80
+  sprintFOV: 90
   sprintFOVStepTime: 10
   useSprintBar: 0
   hideBarWhenFull: 0
@@ -464,7 +464,6 @@ MonoBehaviour:
   bobAmount: {x: 0.15, y: 0.05, z: 0}
   interactKey: 101
   pickupRange: 3
-  keyIcon: {fileID: 0}
 --- !u!82 &-3792584630072734730
 AudioSource:
   m_ObjectHideFlags: 0
