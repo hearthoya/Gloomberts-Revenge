@@ -111,6 +111,10 @@ public class FirstPersonController : MonoBehaviour
     [Tooltip("Key Settings")]
     public KeyCode interactKey = KeyCode.E;
     public float pickupRange = 3f;
+
+    [Tooltip("Pause Stuff")]
+    public KeyCode pauseKey = KeyCode.Escape;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -175,7 +179,14 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
-
+        if (PauseMenu.isPaused)
+        {
+            cameraCanMove = false;
+        }
+        else
+        {
+            cameraCanMove = true;
+        }
         // Control camera movement
         if (cameraCanMove)
         {
@@ -290,6 +301,20 @@ public class FirstPersonController : MonoBehaviour
             if (item != null) {
                 MapManager.ItemCheck(item);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Escape key pressed");
+            if (PauseMenu.isPaused)
+            {
+                PauseMenu.Resume();
+            }
+            else
+            {
+                PauseMenu.Pause();
+            }
+
         }
 
     }
