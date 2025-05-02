@@ -436,7 +436,7 @@ MonoBehaviour:
   enableSprint: 1
   unlimitedSprint: 0
   sprintKey: 304
-  sprintSpeed: 8
+  sprintSpeed: 10
   sprintDuration: 5
   sprintCooldown: 0.5
   sprintFOV: 90
@@ -463,7 +463,8 @@ MonoBehaviour:
   bobSpeed: 10
   bobAmount: {x: 0.15, y: 0.05, z: 0}
   interactKey: 101
-  pickupRange: 3
+  pickupRange: 1.25
+  pauseKey: 27
 --- !u!82 &-3792584630072734730
 AudioSource:
   m_ObjectHideFlags: 0
