@@ -9728,17 +9728,25 @@ MonoBehaviour:
   redDoorRotation: {x: 0, y: 0, z: 0, w: 0}
   blackDoorSpawn: {x: -28.39, y: 10.08, z: -111.97}
   blackDoorRotation: {x: 0, y: 0, z: 0, w: 0}
-  keyPrefab: {fileID: 3698725727416570896, guid: d8c6cd36e32dbf64386abca5ee201213, type: 3}
-  greenKeySpawn: {x: 53.23, y: 0, z: 19.42}
-  yellowKeySpawn: {x: 53.7, y: 0, z: -21.42}
-  blueKeySpawn: {x: -37.16237, y: 0, z: 5.7}
+  keyPrefab: {fileID: 6586380701880126115, guid: 9295189b4f03b8a47b9873a8492069d1, type: 3}
+  greenKeySpawn: {x: 53.23, y: 5, z: 21.5}
+  greenKeyRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+  yellowKeySpawn: {x: 72.66, y: 4.3, z: -34.76}
+  yellowKeyRotation: {x: 0, y: 0, z: 0, w: 0}
+  blueKeySpawn: {x: -32.54, y: 4.51, z: 8.53}
+  blueKeyRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   purpleKeySpawn: {x: 105.54, y: 7, z: 42.41}
+  purpleKeyRotation: {x: 0, y: 0, z: 0, w: 0}
   cyanKeySpawn: {x: 12.7, y: 7, z: 14.6}
+  cyanKeyRotation: {x: 0, y: 0, z: 0, w: 0}
   redKeySpawn: {x: 54.1, y: 7, z: 13.65}
+  redKeyRotation: {x: 0, y: 0, z: 0, w: 0}
   blackKeySpawn: {x: 20.9, y: 0, z: -51.3}
+  blackKeyRotation: {x: 0, y: 0, z: 0, w: 0}
   ventPrefab: {fileID: 4465959512159062729, guid: 4c2686ff6a29fbe4ebc86439f103062b, type: 3}
   screwdriverPrefab: {fileID: 7242709342872038440, guid: 400b6861de54e0a46973ca08347da129, type: 3}
   screwDriverSpawn: {x: -33.4, y: 0.1, z: 5.34}
+  screwDriverRotation: {x: 0, y: 0, z: 0, w: 0}
   ventStartBigSpawn: {x: 67.81077, y: 3.249999, z: 31.39}
   ventStartBigRotation: {x: 0, y: 0, z: 0, w: 0}
   ventBigStartSpawn: {x: 78.57666, y: 3.2500005, z: 11.061346}
@@ -20596,7 +20604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769232865274545983, guid: 63595670e1005b644a5d30b65484a33d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 63.89
+      value: 73.03
       objectReference: {fileID: 0}
     - target: {fileID: 6769232865274545983, guid: 63595670e1005b644a5d30b65484a33d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20604,7 +20612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769232865274545983, guid: 63595670e1005b644a5d30b65484a33d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.71
+      value: -34.33
       objectReference: {fileID: 0}
     - target: {fileID: 6769232865274545983, guid: 63595670e1005b644a5d30b65484a33d, type: 3}
       propertyPath: m_LocalRotation.w
