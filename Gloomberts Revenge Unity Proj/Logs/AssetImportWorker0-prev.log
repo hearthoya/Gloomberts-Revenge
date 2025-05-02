@@ -16,9 +16,13 @@ C:/Users/henry/OneDrive/Desktop/Gloomberts-Revenge/Gloomberts Revenge Unity Proj
 Logs/AssetImportWorker0.log
 -srvPort
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 50675
 =======
 65402
+>>>>>>> Stashed changes
+=======
+65511
 >>>>>>> Stashed changes
 -job-worker-count
 7
@@ -64,6 +68,7 @@ C:/Users/henry/OneDrive/Desktop/Gloomberts-Revenge/Gloomberts Revenge Unity Proj
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Player connection [18068]  Target information:
 
 Player connection [18068]  * "[IP] 172.16.8.2 [Port] 0 [Flags] 2 [Guid] 4054597482 [EditorId] 4054597482 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EVLH4F1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
@@ -78,6 +83,14 @@ Player connection [62324]  * "[IP] 192.168.128.124 [Port] 0 [Flags] 2 [Guid] 460
 
 Player connection [62324] Host joined multi-casting on [225.0.0.222:54997]...
 Player connection [62324] Host joined alternative multi-casting on [225.0.0.222:34997]...
+=======
+Player connection [59812]  Target information:
+
+Player connection [59812]  * "[IP] 192.168.128.124 [Port] 0 [Flags] 2 [Guid] 4174236008 [EditorId] 4174236008 [Version] 1048832 [Id] WindowsEditor(7,Simba) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [59812] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [59812] Host joined alternative multi-casting on [225.0.0.222:34997]...
+>>>>>>> Stashed changes
 JobSystem: Creating JobQueue using job-worker-count value 3
 >>>>>>> Stashed changes
 Input System module state changed to: Initialized.
@@ -91,9 +104,13 @@ Library Redirect Path: Library/
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 2.58 ms, found 3 plugins.
 =======
 Refreshing native plugins compatible for Editor in 3.32 ms, found 3 plugins.
+>>>>>>> Stashed changes
+=======
+Refreshing native plugins compatible for Editor in 22.03 ms, found 3 plugins.
 >>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.34f1 (5ab2d9ed9190)
@@ -110,6 +127,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56488
 Begin MonoManager ReloadAssembly
@@ -135,11 +153,25 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling: 1277ms
 	BeginReloadAssembly (230ms)
 >>>>>>> Stashed changes
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56592
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003878 seconds.
+- Loaded All Assemblies, in  0.854 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.525 seconds
+Domain Reload Profiling: 2377ms
+	BeginReloadAssembly (235ms)
+>>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 	RebuildCommonClasses (39ms)
 	RebuildNativeTypeToScriptingClass (12ms)
@@ -185,6 +217,29 @@ Domain Reload Profiling: 1277ms
 			ProcessInitializeOnLoadAttributes (285ms)
 			ProcessInitializeOnLoadMethodAttributes (95ms)
 >>>>>>> Stashed changes
+=======
+	RebuildCommonClasses (63ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (79ms)
+	LoadAllAssembliesAndSetupDomain (452ms)
+		LoadAssemblies (229ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (446ms)
+			TypeCache.Refresh (443ms)
+				TypeCache.ScanAssembly (412ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1526ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1431ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (60ms)
+			SetLoadedEditorAssemblies (13ms)
+			BeforeProcessingInitializeOnLoad (137ms)
+			ProcessInitializeOnLoadAttributes (1101ms)
+			ProcessInitializeOnLoadMethodAttributes (119ms)
+>>>>>>> Stashed changes
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -194,6 +249,7 @@ Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 - Loaded All Assemblies, in  0.872 seconds
 Refreshing native plugins compatible for Editor in 1.47 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
@@ -201,10 +257,20 @@ Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.696 seconds
 Domain Reload Profiling: 1563ms
 	BeginReloadAssembly (186ms)
+=======
+- Loaded All Assemblies, in  3.302 seconds
+Refreshing native plugins compatible for Editor in 3.97 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.568 seconds
+Domain Reload Profiling: 5855ms
+	BeginReloadAssembly (496ms)
+>>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 		CreateAndSetChildDomain (34ms)
 	RebuildCommonClasses (38ms)
 	RebuildNativeTypeToScriptingClass (12ms)
@@ -676,4 +742,44 @@ Total: 18.208500 ms (FindLiveObjects: 1.216800 ms CreateObjectMapping: 3.054900 
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
+>>>>>>> Stashed changes
+=======
+		CreateAndSetChildDomain (66ms)
+	RebuildCommonClasses (125ms)
+	RebuildNativeTypeToScriptingClass (76ms)
+	initialDomainReloadingComplete (433ms)
+	LoadAllAssembliesAndSetupDomain (2155ms)
+		LoadAssemblies (1301ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (1203ms)
+			TypeCache.Refresh (735ms)
+				TypeCache.ScanAssembly (672ms)
+			BuildScriptInfoCaches (431ms)
+			ResolveRequiredComponents (27ms)
+	FinalizeReload (2570ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2126ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			SetLoadedEditorAssemblies (22ms)
+			BeforeProcessingInitializeOnLoad (435ms)
+			ProcessInitializeOnLoadAttributes (1454ms)
+			ProcessInitializeOnLoadMethodAttributes (176ms)
+			AfterProcessingInitializeOnLoad (22ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (27ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 4.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 184 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6254 unused Assets / (7.4 MB). Loaded Objects now: 6825.
+Memory consumption went from 163.1 MB to 155.7 MB.
+Total: 32.167300 ms (FindLiveObjects: 2.902100 ms CreateObjectMapping: 2.528200 ms MarkObjects: 16.055000 ms  DeleteObjects: 10.679900 ms)
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  2.869 seconds
 >>>>>>> Stashed changes
