@@ -209,6 +209,7 @@ public class MapManager : MonoBehaviour
     void Update()
     {
         CheckIfSpawn();
+        CheckIfPause();
     }
 
     public static void UpdateNavMesh()
@@ -299,5 +300,10 @@ public class MapManager : MonoBehaviour
             gloombert = Instantiate(gloombertPrefab, gloomSpawn, Quaternion.identity);
             inScene = true;
         }
+    }
+
+    void CheckIfPause()
+    {
+
     }
 }
