@@ -8,7 +8,7 @@ TagManager:
   - Door
   - Locked Door
   - Vent
-  - Screwdriver
+  - Drill
   layers:
   - Default
   - TransparentFX

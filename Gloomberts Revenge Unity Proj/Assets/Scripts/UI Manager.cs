@@ -11,10 +11,10 @@ public class UIManager : MonoBehaviour
     public Vector3 greenIconPosition;
     public Vector3 yellowIconPosition;
     public Vector3 blueIconPosition;
-    public Vector3 purpleIconPosition;
+    public Vector3 greyIconPosition;
     public Vector3 cyanIconPosition;
     public Vector3 redIconPosition;
-    public Vector3 blackIconPosition;
+    public Vector3 whiteIconPosition;
 
     static List<GameObject> icons;
     static List<Sprite> images;
@@ -47,12 +47,12 @@ public class UIManager : MonoBehaviour
         blueIcon.SetActive(false);
         icons.Add(blueIcon);
 
-        // Purple
-        GameObject purpleIcon = Instantiate(keyIconPrefab, uiSpace.transform);
-        purpleIcon.GetComponent<RectTransform>().anchoredPosition = purpleIconPosition;
-        purpleIcon.GetComponent<Image>().color = new Color(128, 0, 128);
-        purpleIcon.SetActive(false);
-        icons.Add(purpleIcon);
+        // grey
+        GameObject greyIcon = Instantiate(keyIconPrefab, uiSpace.transform);
+        greyIcon.GetComponent<RectTransform>().anchoredPosition = greyIconPosition;
+        greyIcon.GetComponent<Image>().color = Color.grey;
+        greyIcon.SetActive(false);
+        icons.Add(greyIcon);
 
         // Cyan
         GameObject cyanIcon = Instantiate(keyIconPrefab, uiSpace.transform);
@@ -68,12 +68,12 @@ public class UIManager : MonoBehaviour
         redIcon.SetActive(false);
         icons.Add(redIcon);
 
-        // Black 
-        GameObject blackIcon = Instantiate(keyIconPrefab, uiSpace.transform);
-        blackIcon.GetComponent<RectTransform>().anchoredPosition = blackIconPosition;
-        blackIcon.GetComponent<Image>().color = Color.black;
-        blackIcon.SetActive(false);
-        icons.Add(blackIcon);
+        // White 
+        GameObject whiteIcon = Instantiate(keyIconPrefab, uiSpace.transform);
+        whiteIcon.GetComponent<RectTransform>().anchoredPosition = whiteIconPosition;
+        whiteIcon.GetComponent<Image>().color = Color.white;
+        whiteIcon.SetActive(false);
+        icons.Add(whiteIcon);
     }
 
     public static void UpdateIcons(int i)

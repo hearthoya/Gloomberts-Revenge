@@ -8244,10 +8244,10 @@ MonoBehaviour:
   greenIconPosition: {x: 377, y: 172, z: 0}
   yellowIconPosition: {x: 377, y: 144, z: 0}
   blueIconPosition: {x: 377, y: 116, z: 0}
-  purpleIconPosition: {x: 377, y: 88, z: 0}
+  greyIconPosition: {x: 377, y: 88, z: 0}
   cyanIconPosition: {x: 377, y: 60, z: 0}
   redIconPosition: {x: 377, y: 32, z: 0}
-  blackIconPosition: {x: 377, y: 4, z: 0}
+  whiteIconPosition: {x: 377, y: 4, z: 0}
 --- !u!1001 &604296296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10093,16 +10093,16 @@ MonoBehaviour:
   blueDoorRotation1: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   blueDoorSpawn2: {x: -46.58, y: 3.2582545, z: -37.19}
   blueDoorRotation2: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
-  purpleDoorSpawn: {x: -37.16237, y: 10.06, z: -1.1558516}
-  purpleDoorRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+  greyDoorSpawn: {x: -37.16237, y: 10.06, z: -1.1558516}
+  greyDoorRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   cyanDoorSpawn1: {x: 25.5, y: 10.09, z: 37.44}
   cyanDoorRotation1: {x: 0, y: 0, z: 0, w: 0}
   cyanDoorSpawn2: {x: 58.005585, y: 10.03, z: -14.412538}
   cyanDoorRotation2: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   redDoorSpawn: {x: -28.39, y: 10.08, z: -54.15}
   redDoorRotation: {x: 0, y: 0, z: 0, w: 0}
-  blackDoorSpawn: {x: -28.39, y: 10.08, z: -111.97}
-  blackDoorRotation: {x: 0, y: 0, z: 0, w: 0}
+  whiteDoorSpawn: {x: -28.39, y: 10.08, z: -111.97}
+  whiteDoorRotation: {x: 0, y: 0, z: 0, w: 0}
   keyPrefab: {fileID: 6586380701880126115, guid: 9295189b4f03b8a47b9873a8492069d1, type: 3}
   greenKeySpawn: {x: 53.23, y: 5, z: 21.5}
   greenKeyRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
@@ -10110,18 +10110,18 @@ MonoBehaviour:
   yellowKeyRotation: {x: 0, y: 0, z: 0, w: 0}
   blueKeySpawn: {x: -32.54, y: 4.51, z: 8.53}
   blueKeyRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
-  purpleKeySpawn: {x: 105.54, y: 7, z: 42.41}
-  purpleKeyRotation: {x: 0, y: 0, z: 0, w: 0}
-  cyanKeySpawn: {x: 12.7, y: 7, z: 14.6}
-  cyanKeyRotation: {x: 0, y: 0, z: 0, w: 0}
-  redKeySpawn: {x: 54.1, y: 7, z: 13.65}
-  redKeyRotation: {x: 0, y: 0, z: 0, w: 0}
-  blackKeySpawn: {x: 20.9, y: 0, z: -51.3}
-  blackKeyRotation: {x: 0, y: 0, z: 0, w: 0}
+  greyKeySpawn: {x: 103.7, y: 11.9, z: 42.41}
+  greyKeyRotation: {x: 0, y: 0, z: 0, w: 0}
+  cyanKeySpawn: {x: 13.49, y: 11.3, z: 14.6}
+  cyanKeyRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+  redKeySpawn: {x: 56.16, y: 10.82, z: 21.13}
+  redKeyRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+  whiteKeySpawn: {x: 22.36, y: 4.54, z: -49.46}
+  whiteKeyRotation: {x: 0, y: 0, z: 0, w: 0}
   ventPrefab: {fileID: 4465959512159062729, guid: 4c2686ff6a29fbe4ebc86439f103062b, type: 3}
-  screwdriverPrefab: {fileID: 7242709342872038440, guid: 400b6861de54e0a46973ca08347da129, type: 3}
-  screwDriverSpawn: {x: -33.4, y: 0.1, z: 5.34}
-  screwDriverRotation: {x: 0, y: 0, z: 0, w: 0}
+  drillPrefab: {fileID: 2324463433763140059, guid: f5a2d19d564785d45a6207078113bcaa, type: 3}
+  drillSpawn: {x: -33.4, y: 0.489, z: 5.34}
+  drillRotation: {x: 0, y: 0, z: 0, w: 0}
   ventStartBigSpawn: {x: 67.81077, y: 3.249999, z: 31.39}
   ventStartBigRotation: {x: 0, y: 0, z: 0, w: 0}
   ventBigStartSpawn: {x: 78.57666, y: 3.2500005, z: 11.061346}
@@ -10152,7 +10152,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.8841515, y: 10.321966, z: 0.55506325}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -28.39, y: 10.08, z: -111.97}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

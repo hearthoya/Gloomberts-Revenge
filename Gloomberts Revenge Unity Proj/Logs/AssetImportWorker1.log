@@ -15,7 +15,7 @@ C:/Users/dafas/OneDrive/Escritorio/Unity_Projects/Gloomberts-Revenge/Gloomberts 
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-49837
+51685
 -job-worker-count
 3
 -background-job-worker-count
@@ -59,13 +59,379 @@ C:/Users/dafas/OneDrive/Escritorio/Unity_Projects/Gloomberts-Revenge/Gloomberts 
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [62548]  Target information:
+Player connection [62968]  Target information:
 
-Player connection [62548]  * "[IP] 192.168.128.124 [Port] 0 [Flags] 2 [Guid] 561133166 [EditorId] 561133166 [Version] 1048832 [Id] WindowsEditor(7,Simba) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [62968]  * "[IP] 192.168.128.124 [Port] 0 [Flags] 2 [Guid] 2058584054 [EditorId] 2058584054 [Version] 1048832 [Id] WindowsEditor(7,Simba) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [62548] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [62548] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [62968] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [62968] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 3
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 4.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.34f1 (5ab2d9ed9190)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/dafas/OneDrive/Escritorio/Unity_Projects/Gloomberts-Revenge/Gloomberts Revenge Unity Proj/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x9a49)
+    Vendor:   Intel
+    VRAM:     8081 MB
+    Driver:   30.0.101.1404
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56500
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003847 seconds.
+- Loaded All Assemblies, in  0.677 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.648 seconds
+Domain Reload Profiling: 1322ms
+	BeginReloadAssembly (225ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (71ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (77ms)
+	LoadAllAssembliesAndSetupDomain (280ms)
+		LoadAssemblies (219ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (274ms)
+			TypeCache.Refresh (272ms)
+				TypeCache.ScanAssembly (250ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (649ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (569ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (45ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (104ms)
+			ProcessInitializeOnLoadAttributes (313ms)
+			ProcessInitializeOnLoadMethodAttributes (101ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.651 seconds
+Refreshing native plugins compatible for Editor in 1.72 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.933 seconds
+Domain Reload Profiling: 3576ms
+	BeginReloadAssembly (301ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (62ms)
+	RebuildNativeTypeToScriptingClass (25ms)
+	initialDomainReloadingComplete (71ms)
+	LoadAllAssembliesAndSetupDomain (1183ms)
+		LoadAssemblies (712ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (657ms)
+			TypeCache.Refresh (459ms)
+				TypeCache.ScanAssembly (429ms)
+			BuildScriptInfoCaches (174ms)
+			ResolveRequiredComponents (19ms)
+	FinalizeReload (1934ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1687ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (246ms)
+			ProcessInitializeOnLoadAttributes (1291ms)
+			ProcessInitializeOnLoadMethodAttributes (124ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 2.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 184 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6254 unused Assets / (8.1 MB). Loaded Objects now: 6825.
+Memory consumption went from 163.2 MB to 155.1 MB.
+Total: 18.801500 ms (FindLiveObjects: 2.015400 ms CreateObjectMapping: 1.865400 ms MarkObjects: 8.833300 ms  DeleteObjects: 6.085500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 380680.950237 seconds.
+  path: Assets/asset_store/key_lock/textures/lock/m_lock_01_m_s.png
+  artifactKey: Guid(f86513d6f9a28c74dbd9c733b20671b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/asset_store/key_lock/textures/lock/m_lock_01_m_s.png using Guid(f86513d6f9a28c74dbd9c733b20671b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bc60eb88ed2a662acab8ad5c95ba85ec') in 0.1486756 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/asset_store/key_lock/textures/lock/m_lock_01_n.png
+  artifactKey: Guid(e1a0eea679fc84343b4bf91ab02e4c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/asset_store/key_lock/textures/lock/m_lock_01_n.png using Guid(e1a0eea679fc84343b4bf91ab02e4c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7040bc5a39599e4fdb49f332962dd765') in 0.1078982 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 117.161529 seconds.
+  path: Assets/Workplace Tools/Prefabs/Board.prefab
+  artifactKey: Guid(136fed684fbe9844e8fc5f473bab97cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Prefabs/Board.prefab using Guid(136fed684fbe9844e8fc5f473bab97cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8dbae9f7012d5304a8560ea047f77137') in 0.122515 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Workplace Tools/Prefabs/Pliers.prefab
+  artifactKey: Guid(5f51a2d72c55f9f4788ea118ddccce4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Prefabs/Pliers.prefab using Guid(5f51a2d72c55f9f4788ea118ddccce4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bd6ef1ea0377ae5eba89b9ed94f8bfda') in 0.0526345 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 34
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Workplace Tools/Prefabs/Wrench_Combination.prefab
+  artifactKey: Guid(e2213544abe0a9548a2bf8428f0a1a78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Prefabs/Wrench_Combination.prefab using Guid(e2213544abe0a9548a2bf8428f0a1a78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e0fb9c0fbaa484b78156b8ea2042f915') in 0.0631298 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Workplace Tools/Prefabs/Screwdriver_Single.prefab
+  artifactKey: Guid(0a2dc1ad5bdadac469dbbf86dbb08eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Prefabs/Screwdriver_Single.prefab using Guid(0a2dc1ad5bdadac469dbbf86dbb08eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e93ca7bbec518167e75f8257045ac04b') in 0.0687536 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Workplace Tools/Prefabs/Screw_Single.prefab
+  artifactKey: Guid(19beb85d8f56e574987d73e691a34415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Prefabs/Screw_Single.prefab using Guid(19beb85d8f56e574987d73e691a34415) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '930460010a961507710974746c92949a') in 0.0738738 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Workplace Tools/Prefabs/Hammer_01.prefab
+  artifactKey: Guid(ebcc6d962399b194e8f25886f0cd0762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Prefabs/Hammer_01.prefab using Guid(ebcc6d962399b194e8f25886f0cd0762) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8e93263ef617c7c78f3c2c3cfd58156f') in 0.0708182 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 34
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Workplace Tools/Prefabs/Wrench_Open.prefab
+  artifactKey: Guid(77496b3371ad12e44a303ff403f0596b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Prefabs/Wrench_Open.prefab using Guid(77496b3371ad12e44a303ff403f0596b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aebded731bbf900a81b26719cffcc6cd') in 0.0768411 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Workplace Tools/Prefabs/Saw.prefab
+  artifactKey: Guid(436e0a09a3d234b42b4637838878fd88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Prefabs/Saw.prefab using Guid(436e0a09a3d234b42b4637838878fd88) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1661c7ed13fb10ccbbd9fa98006ce626') in 0.082299 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Workplace Tools/Prefabs/Bolt.prefab
+  artifactKey: Guid(1a5c9c34146ebbc42af280d68f43bd19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Prefabs/Bolt.prefab using Guid(1a5c9c34146ebbc42af280d68f43bd19) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3a2baca417bddfc2cb05a1992edd387f') in 0.0637066 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.705 seconds
+Refreshing native plugins compatible for Editor in 2.64 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.737 seconds
+Domain Reload Profiling: 3442ms
+	BeginReloadAssembly (351ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (89ms)
+	RebuildCommonClasses (62ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (1217ms)
+		LoadAssemblies (659ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (737ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (687ms)
+			ResolveRequiredComponents (28ms)
+	FinalizeReload (1739ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1477ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (277ms)
+			ProcessInitializeOnLoadAttributes (1014ms)
+			ProcessInitializeOnLoadMethodAttributes (160ms)
+			AfterProcessingInitializeOnLoad (13ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 2.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6252 unused Assets / (7.5 MB). Loaded Objects now: 6841.
+Memory consumption went from 136.3 MB to 128.8 MB.
+Total: 20.358500 ms (FindLiveObjects: 0.927900 ms CreateObjectMapping: 3.206100 ms MarkObjects: 8.129700 ms  DeleteObjects: 8.092600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 69.414220 seconds.
+  path: Assets/Workplace Tools/Materials/Axe_Wood.mat
+  artifactKey: Guid(77e6ba2a9fe5a9f499c4bcefabb4cde5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Axe_Wood.mat using Guid(77e6ba2a9fe5a9f499c4bcefabb4cde5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a08e637fe46ff5810744abcfa55b7906') in 0.2104939 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Workplace Tools/Materials/Hammer_02_Wood.mat
+  artifactKey: Guid(4cec797924af3bd46af462a4c227d9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Hammer_02_Wood.mat using Guid(4cec797924af3bd46af462a4c227d9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2968755c28211f833a08c72e2f0c9c4f') in 0.0217538 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Workplace Tools/Materials/Pipe_Wrench_White.mat
+  artifactKey: Guid(24919cbc9ceeaf346914a2fdd30faff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Pipe_Wrench_White.mat using Guid(24919cbc9ceeaf346914a2fdd30faff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '081552ef725dac1b4eba0e831e1c7d97') in 0.0212909 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Workplace Tools/Materials/Hammer_01_Metal.mat
+  artifactKey: Guid(a59b58a257698d14fb71a26ef50a29d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Hammer_01_Metal.mat using Guid(a59b58a257698d14fb71a26ef50a29d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '903ee4f4219a15b76a4f1565b35e059c') in 0.0163011 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Workplace Tools/Materials/Pliers_Metal.mat
+  artifactKey: Guid(3bce78631b295fa47ac2c7767127e39b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Pliers_Metal.mat using Guid(3bce78631b295fa47ac2c7767127e39b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '76f10504bdd21bc90dec6e1718be0239') in 0.030247 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Workplace Tools/Materials/Wrench_Combination_Metal.mat
+  artifactKey: Guid(fe711f220fb45f041a89e997d1a81142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Wrench_Combination_Metal.mat using Guid(fe711f220fb45f041a89e997d1a81142) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8dac4a76556aa4f68188c4886e0f437c') in 0.0250835 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Workplace Tools/Materials/Screwdriver_Cross_Metal.mat
+  artifactKey: Guid(caf22255f60b5eb48ba835b355812f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Screwdriver_Cross_Metal.mat using Guid(caf22255f60b5eb48ba835b355812f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f0ec846bb297932b50d5ac432adac1af') in 0.0187155 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Workplace Tools/Materials/Screwdriver_Single_Base_Yellow.mat
+  artifactKey: Guid(d313343d51b9b3442bad4cff898cd45f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Screwdriver_Single_Base_Yellow.mat using Guid(d313343d51b9b3442bad4cff898cd45f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6773045de5853f9b4b7f087dcc9a0bd1') in 0.0194055 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Workplace Tools/Materials/Screwdriver_Single_Metal.mat
+  artifactKey: Guid(4a43fea3c466b1a4c94735ecb32c9875) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Screwdriver_Single_Metal.mat using Guid(4a43fea3c466b1a4c94735ecb32c9875) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bb1146b032e5b01fd147e91e66104a58') in 0.0180257 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Workplace Tools/Materials/Screw_Metal 2.mat
+  artifactKey: Guid(0dff08635ccd8f445bb70437cc783a12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Screw_Metal 2.mat using Guid(0dff08635ccd8f445bb70437cc783a12) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '036c5840dd02a311f7b5443d07f7e1cd') in 0.0418522 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Workplace Tools/Materials/Screwdriver_Cross_Base_Black.mat
+  artifactKey: Guid(9192abbf84751db418e694bf2cae907b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Screwdriver_Cross_Base_Black.mat using Guid(9192abbf84751db418e694bf2cae907b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'df1785d7b787a81eb528bbdf207deddf') in 0.0251478 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000104 seconds.
+  path: Assets/Workplace Tools/Materials/Saw_Blade.mat
+  artifactKey: Guid(9db383ec499a6d540bd614c381093d95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Saw_Blade.mat using Guid(9db383ec499a6d540bd614c381093d95) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '17d65162db3462f60fa4dc42a2e7d3b3') in 0.0231502 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Workplace Tools/Materials/Screw_Metal 3.mat
+  artifactKey: Guid(942afc25320815342944f4738176c04f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Screw_Metal 3.mat using Guid(942afc25320815342944f4738176c04f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8ee6278b4f08da0a48242510374af255') in 0.0198712 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Workplace Tools/Materials/Wrench_Open_Metal.mat
+  artifactKey: Guid(a2256641c81a50a4dba788bb035b9575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Workplace Tools/Materials/Wrench_Open_Metal.mat using Guid(a2256641c81a50a4dba788bb035b9575) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd9557f04d62a39875a92acdc84fa7ee2') in 0.0180269 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -33,16 +33,16 @@ public class MapManager : MonoBehaviour
     public Quaternion blueDoorRotation1;
     public Vector3 blueDoorSpawn2;
     public Quaternion blueDoorRotation2;
-    public Vector3 purpleDoorSpawn;
-    public Quaternion purpleDoorRotation;
+    public Vector3 greyDoorSpawn;
+    public Quaternion greyDoorRotation;
     public Vector3 cyanDoorSpawn1;
     public Quaternion cyanDoorRotation1;
     public Vector3 cyanDoorSpawn2;
     public Quaternion cyanDoorRotation2;
     public Vector3 redDoorSpawn;
     public Quaternion redDoorRotation;
-    public Vector3 blackDoorSpawn;
-    public Quaternion blackDoorRotation;
+    public Vector3 whiteDoorSpawn;
+    public Quaternion whiteDoorRotation;
 
     // All Keys
 
@@ -57,24 +57,24 @@ public class MapManager : MonoBehaviour
     public Quaternion yellowKeyRotation;
     public Vector3 blueKeySpawn;
     public Quaternion blueKeyRotation;
-    public Vector3 purpleKeySpawn;
-    public Quaternion purpleKeyRotation;
+    public Vector3 greyKeySpawn;
+    public Quaternion greyKeyRotation;
     public Vector3 cyanKeySpawn;
     public Quaternion cyanKeyRotation;
     public Vector3 redKeySpawn;
     public Quaternion redKeyRotation;
-    public Vector3 blackKeySpawn;
-    public Quaternion blackKeyRotation;
+    public Vector3 whiteKeySpawn;
+    public Quaternion whiteKeyRotation;
 
     [Header("Vent Stuff")]
     public GameObject ventPrefab;
     static List<GameObject> vents;
 
-    public GameObject screwdriverPrefab;
-    public static GameObject screwdriver;
-    public Vector3 screwDriverSpawn;
-    public Quaternion screwDriverRotation;
-    public static bool pickedScrewdriver;
+    public GameObject drillPrefab;
+    public static GameObject drill;
+    public Vector3 drillSpawn;
+    public Quaternion drillRotation;
+    public static bool pickedDrill;
 
     public Vector3 ventStartBigSpawn;
     public Quaternion ventStartBigRotation;
@@ -151,16 +151,16 @@ public class MapManager : MonoBehaviour
         keys.Add(blueKey);
         numDoors.Add(blueDoors.Count);
 
-        // Purple
-        GameObject purpleDoor = Instantiate(doorPrefab, purpleDoorSpawn, purpleDoorRotation);
-        purpleDoor.GetComponent<Renderer>().material.color = new Color(128, 0, 128);
-        List<GameObject> purpleDoors = new List<GameObject>() { purpleDoor };
-        GameObject purpleKey = Instantiate(keyPrefab, purpleKeySpawn, purpleKeyRotation);
-        purpleKey.GetComponent<Renderer>().material.color = new Color(128, 0, 128);
-        keysToDoors.Add(3, purpleDoors);
+        // Grey
+        GameObject greyDoor = Instantiate(doorPrefab, greyDoorSpawn, greyDoorRotation);
+        greyDoor.GetComponent<Renderer>().material.color = Color.gray;
+        List<GameObject> greyDoors = new List<GameObject>() { greyDoor };
+        GameObject greyKey = Instantiate(keyPrefab, greyKeySpawn, greyKeyRotation);
+        greyKey.GetComponent<Renderer>().material.color = Color.gray;
+        keysToDoors.Add(3, greyDoors);
         pickedKeys.Add(false);
-        keys.Add(purpleKey);
-        numDoors.Add(purpleDoors.Count);
+        keys.Add(greyKey);
+        numDoors.Add(greyDoors.Count);
 
         // Cyan
         GameObject cyanDoor1 = Instantiate(doorPrefab, cyanDoorSpawn1, cyanDoorRotation1);
@@ -186,20 +186,19 @@ public class MapManager : MonoBehaviour
         keys.Add(redKey);
         numDoors.Add(redDoors.Count);
 
-        // Black
-        GameObject blackDoor = Instantiate(doorPrefab, blackDoorSpawn, blackDoorRotation);
-        blackDoor.GetComponent<Renderer>().material.color = Color.black;
-        List<GameObject> blackDoors = new List<GameObject>() { blackDoor };
-        GameObject blackKey = Instantiate(keyPrefab, blackKeySpawn, blackKeyRotation);
-        redKey.GetComponent<Renderer>().material.color = Color.black;
-        keysToDoors.Add(6, blackDoors);
+        // White
+        GameObject whiteDoor = Instantiate(doorPrefab, whiteDoorSpawn, whiteDoorRotation);
+        whiteDoor.GetComponent<Renderer>().material.color = Color.white;
+        List<GameObject> whiteDoors = new List<GameObject>() { whiteDoor };
+        GameObject whiteKey = Instantiate(keyPrefab, whiteKeySpawn, whiteKeyRotation);
+        redKey.GetComponent<Renderer>().material.color = new Color(128f, 0f, 128f);
+        keysToDoors.Add(6, whiteDoors);
         pickedKeys.Add(false);
-        keys.Add(blackKey);
-        numDoors.Add(blackDoors.Count);
+        keys.Add(whiteKey);
+        numDoors.Add(whiteDoors.Count);
 
-        screwdriver = Instantiate(screwdriverPrefab, screwDriverSpawn, screwDriverRotation);
-        screwdriver.GetComponent<Renderer>().material.color = new Color(1f, 0.5f, 0f);
-        pickedScrewdriver = false;
+        drill = Instantiate(drillPrefab, drillSpawn, drillRotation);
+        pickedDrill = false;
 
         vents.Add(Instantiate(ventPrefab, ventStartBigSpawn, ventStartBigRotation));
         vents.Add(Instantiate(ventPrefab, ventBigStartSpawn, ventBigStartRotation));
@@ -292,7 +291,7 @@ public class MapManager : MonoBehaviour
                 if (vent != null)
                 {
                     Vector3 pos = vent.transform.position;
-                    if (Vector3.Distance(pos, item.transform.position) < 0.01f && pickedScrewdriver)
+                    if (Vector3.Distance(pos, item.transform.position) < 0.01f && pickedDrill)
                     {
                         vents[i] = null;
                         Destroy(vent);
@@ -301,10 +300,10 @@ public class MapManager : MonoBehaviour
                 }
             }
         }
-        if (item.CompareTag("Screwdriver"))
+        if (item.CompareTag("Drill"))
         {
-            Destroy(screwdriver);
-            pickedScrewdriver = true;
+            Destroy(drill);
+            pickedDrill = true;
         }
     }
 
