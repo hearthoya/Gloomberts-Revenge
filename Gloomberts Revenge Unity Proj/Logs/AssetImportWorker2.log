@@ -9,11 +9,11 @@ C:\Program Files\Unity\Hub\Editor\6000.0.34f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker1
+AssetImportWorker2
 -projectPath
 C:/Users/dafas/OneDrive/Escritorio/Unity_Projects/Gloomberts-Revenge/Gloomberts Revenge Unity Proj
 -logFile
-Logs/AssetImportWorker1.log
+Logs/AssetImportWorker2.log
 -srvPort
 49837
 -job-worker-count
@@ -59,12 +59,12 @@ C:/Users/dafas/OneDrive/Escritorio/Unity_Projects/Gloomberts-Revenge/Gloomberts 
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [62548]  Target information:
+Player connection [64184]  Target information:
 
-Player connection [62548]  * "[IP] 192.168.128.124 [Port] 0 [Flags] 2 [Guid] 561133166 [EditorId] 561133166 [Version] 1048832 [Id] WindowsEditor(7,Simba) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [64184]  * "[IP] 192.168.128.124 [Port] 0 [Flags] 2 [Guid] 4256591436 [EditorId] 4256591436 [Version] 1048832 [Id] WindowsEditor(7,Simba) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [62548] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [62548] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [64184] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [64184] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 3
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.

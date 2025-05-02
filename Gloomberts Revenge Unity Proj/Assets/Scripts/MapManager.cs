@@ -21,6 +21,7 @@ public class MapManager : MonoBehaviour
     [Header("Doors Stuff")]
     public GameObject doorPrefab;
     static Dictionary<int, List<GameObject>> keysToDoors;
+    static List<int> numDoors;
 
     // All Locked Doors
     public Vector3 greenDoorSpawn;
@@ -48,7 +49,7 @@ public class MapManager : MonoBehaviour
     [Header("Keys")]
     public GameObject keyPrefab;
     static List<GameObject> keys;
-    static List<bool> pickedKeys;
+    public static List<bool> pickedKeys;
 
     public Vector3 greenKeySpawn;
     public Quaternion greenKeyRotation;
@@ -103,6 +104,7 @@ public class MapManager : MonoBehaviour
         vents = new List<GameObject>();
         pickedKeys = new List<bool>();
         keys = new List<GameObject>();
+        numDoors = new List<int>();
 
         inScene = false;
 
@@ -113,26 +115,28 @@ public class MapManager : MonoBehaviour
         playerObject = Instantiate(playerPrefab, playerSpawn, Quaternion.identity);
         firstPersonController = playerObject.GetComponent<FirstPersonController>();
 
-        // Yellow
-        
-        yellowDoor = Instantiate(doorPrefab, yellowDoorSpawn, yellowDoorRotation);
-        yellowDoor.GetComponent<Renderer>().material.color = Color.yellow;
-        List<GameObject> yellowDoors = new List<GameObject>() {yellowDoor};
-        GameObject yellowKey = Instantiate(keyPrefab, yellowKeySpawn, yellowKeyRotation);
-        yellowKey.GetComponent<Renderer>().material.color = Color.yellow;
-        keysToDoors.Add(0, yellowDoors);
-        pickedKeys.Add(false);
-        keys.Add(yellowKey);
-
         // Green
         GameObject greenDoor = Instantiate(doorPrefab, greenDoorSpawn, greenDoorRotation);
         greenDoor.GetComponent<Renderer>().material.color = Color.green;
         List<GameObject> greenDoors = new List<GameObject>() { greenDoor };
         GameObject greenKey = Instantiate(keyPrefab, greenKeySpawn, greenKeyRotation);
         greenKey.GetComponent<Renderer>().material.color = Color.green;
-        keysToDoors.Add(1, greenDoors);
+        keysToDoors.Add(0, greenDoors);
         pickedKeys.Add(false);
         keys.Add(greenKey);
+        numDoors.Add(greenDoors.Count);
+
+        // Yellow
+
+        yellowDoor = Instantiate(doorPrefab, yellowDoorSpawn, yellowDoorRotation);
+        yellowDoor.GetComponent<Renderer>().material.color = Color.yellow;
+        List<GameObject> yellowDoors = new List<GameObject>() {yellowDoor};
+        GameObject yellowKey = Instantiate(keyPrefab, yellowKeySpawn, yellowKeyRotation);
+        yellowKey.GetComponent<Renderer>().material.color = Color.yellow;
+        keysToDoors.Add(1, yellowDoors);
+        pickedKeys.Add(false);
+        keys.Add(yellowKey);
+        numDoors.Add(yellowDoors.Count);
 
         // Blue
         GameObject blueDoor1 = Instantiate(doorPrefab, blueDoorSpawn1, blueDoorRotation1);
@@ -145,6 +149,7 @@ public class MapManager : MonoBehaviour
         keysToDoors.Add(2, blueDoors);
         pickedKeys.Add(false);
         keys.Add(blueKey);
+        numDoors.Add(blueDoors.Count);
 
         // Purple
         GameObject purpleDoor = Instantiate(doorPrefab, purpleDoorSpawn, purpleDoorRotation);
@@ -155,6 +160,7 @@ public class MapManager : MonoBehaviour
         keysToDoors.Add(3, purpleDoors);
         pickedKeys.Add(false);
         keys.Add(purpleKey);
+        numDoors.Add(purpleDoors.Count);
 
         // Cyan
         GameObject cyanDoor1 = Instantiate(doorPrefab, cyanDoorSpawn1, cyanDoorRotation1);
@@ -167,6 +173,7 @@ public class MapManager : MonoBehaviour
         keysToDoors.Add(4, cyanDoors);
         pickedKeys.Add(false);
         keys.Add(cyanKey);
+        numDoors.Add(cyanDoors.Count);
 
         // Red
         GameObject redDoor = Instantiate(doorPrefab, redDoorSpawn, redDoorRotation);
@@ -177,6 +184,7 @@ public class MapManager : MonoBehaviour
         keysToDoors.Add(5, redDoors);
         pickedKeys.Add(false);
         keys.Add(redKey);
+        numDoors.Add(redDoors.Count);
 
         // Black
         GameObject blackDoor = Instantiate(doorPrefab, blackDoorSpawn, blackDoorRotation);
@@ -187,6 +195,7 @@ public class MapManager : MonoBehaviour
         keysToDoors.Add(6, blackDoors);
         pickedKeys.Add(false);
         keys.Add(blackKey);
+        numDoors.Add(blackDoors.Count);
 
         screwdriver = Instantiate(screwdriverPrefab, screwDriverSpawn, screwDriverRotation);
         screwdriver.GetComponent<Renderer>().material.color = new Color(1f, 0.5f, 0f);
@@ -209,7 +218,6 @@ public class MapManager : MonoBehaviour
     void Update()
     {
         CheckIfSpawn();
-        CheckIfPause();
     }
 
     public static void UpdateNavMesh()
@@ -232,6 +240,7 @@ public class MapManager : MonoBehaviour
                         Vector3 pos = key.transform.position;
                         if (Vector3.Distance(pos, item.transform.position) < 0.01f)
                         {
+                            UIManager.UpdateIcons(i);
                             keys[i] = null;
                             pickedKeys[i] = true;
                             Destroy(key);
@@ -256,6 +265,11 @@ public class MapManager : MonoBehaviour
                             if (Vector3.Distance(pos, item.transform.position) < 0.01f && keys[i] == null)
                             {
                                 doors[j] = null;
+                                numDoors[i] -= 1;
+                                if(numDoors[i] == 0)
+                                {
+                                    UIManager.UpdateIcons(i);
+                                }
                                 Destroy(door);
                                 UpdateNavMesh();
                             }
@@ -300,10 +314,5 @@ public class MapManager : MonoBehaviour
             gloombert = Instantiate(gloombertPrefab, gloomSpawn, Quaternion.identity);
             inScene = true;
         }
-    }
-
-    void CheckIfPause()
-    {
-
     }
 }
