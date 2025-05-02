@@ -43,8 +43,6 @@ public class MapManager : MonoBehaviour
     public Quaternion cyanDoorRotation1;
     public Vector3 cyanDoorSpawn2;
     public Quaternion cyanDoorRotation2;
-    public Vector3 cyanDoorSpawn3;
-    public Quaternion cyanDoorRotation3;
     public Vector3 redDoorSpawn;
     public Quaternion redDoorRotation;
     public Vector3 blackDoorSpawn;
@@ -92,6 +90,8 @@ public class MapManager : MonoBehaviour
     public Quaternion ventEndGloomRotation;
     public Vector3 ventGloomEndSpawn;
     public Quaternion ventGloomEndRotation;
+    public Vector3 ventHallwayEndSpawn;
+    public Quaternion ventHallwayEndRotation;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -158,9 +158,7 @@ public class MapManager : MonoBehaviour
         cyanDoor1.GetComponent<Renderer>().material.color = Color.cyan; 
         GameObject cyanDoor2 = Instantiate(doorPrefab, cyanDoorSpawn2, cyanDoorRotation2);
         cyanDoor2.GetComponent<Renderer>().material.color = Color.cyan;
-        GameObject cyanDoor3 = Instantiate(doorPrefab, cyanDoorSpawn3, cyanDoorRotation3);
-        cyanDoor3.GetComponent<Renderer>().material.color = Color.cyan;
-        List<GameObject> cyanDoors = new List<GameObject>() { cyanDoor1, cyanDoor2, cyanDoor3};
+        List<GameObject> cyanDoors = new List<GameObject>() { cyanDoor1, cyanDoor2};
         GameObject cyanKey = Instantiate(keyPrefab, cyanKeySpawn, Quaternion.identity);
         cyanKey.GetComponent<Renderer>().material.color = Color.cyan;
         keysToDoors.Add(4, cyanDoors);
@@ -200,6 +198,7 @@ public class MapManager : MonoBehaviour
         vents.Add(Instantiate(ventPrefab, ventBelowSpawn, ventBelowRotation));
         vents.Add(Instantiate(ventPrefab, ventEndGloomSpawn, ventEndGloomRotation));
         vents.Add(Instantiate(ventPrefab, ventGloomEndSpawn, ventGloomEndRotation));
+        vents.Add(Instantiate(ventPrefab, ventHallwayEndSpawn, ventHallwayEndRotation));
 
     }
 
