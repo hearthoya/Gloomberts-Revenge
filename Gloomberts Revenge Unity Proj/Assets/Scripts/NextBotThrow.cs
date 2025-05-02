@@ -33,6 +33,7 @@ public class NextBotThrow : MonoBehaviour
                 if (hit >= 10)
                 {
                     SceneManager.LoadScene("Game Over");
+                    Cursor.lockState = CursorLockMode.None;
                 }
                 Vector3 awayDirection = collider.transform.position - transform.position;
                 rigidbody.AddForce(awayDirection.normalized * pushForce, ForceMode.Impulse);

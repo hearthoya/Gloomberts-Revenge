@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/AI Demo Video.unity
     guid: bee9f4948a9df0e45aa00077ed0ae32f
   - enabled: 1
-    path: Assets/Scenes/Game Over.unity
-    guid: 5052f5d6843857f4ba62f28401271659
-  - enabled: 1
     path: Assets/Scenes/StartScreen.unity
     guid: ccae79c59779d074c959d942ae618b9d
   - enabled: 1
@@ -20,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floors/Game.unity
     guid: 3406d1e91a7f75f4b8aa052bb41639a7
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 5052f5d6843857f4ba62f28401271659
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0

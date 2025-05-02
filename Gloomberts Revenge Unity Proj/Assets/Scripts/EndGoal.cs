@@ -10,6 +10,7 @@ public class EndGoal : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene("Winning Scene");
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

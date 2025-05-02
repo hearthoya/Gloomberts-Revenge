@@ -1,11 +1,6 @@
-using System.Collections;
-using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEditor.PackageManager;
-using UnityEngine.AI;
 using Unity.AI.Navigation;
-using Unity.VisualScripting;
 
 public class MapManager : MonoBehaviour
 {
@@ -210,6 +205,7 @@ public class MapManager : MonoBehaviour
 
     public static void UpdateNavMesh()
     {
+        CoroutineRunner.Instance.RunWaitCoroutine();
         surface.BuildNavMesh();
     }
 
