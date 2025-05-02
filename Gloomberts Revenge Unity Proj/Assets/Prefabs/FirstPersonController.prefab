@@ -872,9 +872,9 @@ MonoBehaviour:
   mat: {fileID: 0}
   flatLut: {fileID: 2800000, guid: ed64f9e7bcc4d9f4993fd20c43d2498d, type: 3}
   bayerTexture: {fileID: 2800000, guid: eac7505667530464e91debe0b4a8492b, type: 3}
-  ColorBleed: 0.25
+  ColorBleed: 0.2
   LinesMult: 0.8
-  ColorShift: 0.29
+  ColorShift: 0.1
   newScreenSize: {x: 4000, y: 4000}
   screenStretching: {x: 4, y: 3}
   CustomScreenSize: 1
