@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall Horizontal
       objectReference: {fileID: 0}
+    - target: {fileID: 2344757007854814774, guid: 4ab4ec450cd42d443a27d6b6f9111215, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.99
+      objectReference: {fileID: 0}
     - target: {fileID: 3410772168660280512, guid: 4ab4ec450cd42d443a27d6b6f9111215, type: 3}
       propertyPath: m_ReceiveShadows
       value: 1

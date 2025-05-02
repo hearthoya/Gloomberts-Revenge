@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Instruction Screen.unity
     guid: 026c9e17e10ebc54ebcef55b9936160f
   - enabled: 1
-    path: Assets/Scenes/Floors/Game.unity
+    path: Assets/Scenes/Game.unity
     guid: 3406d1e91a7f75f4b8aa052bb41639a7
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
