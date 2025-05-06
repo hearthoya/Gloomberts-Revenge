@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Unity.AI.Navigation;
+using UnityEditor.PackageManager;
 
 public class MapManager : MonoBehaviour
 {
@@ -22,6 +23,14 @@ public class MapManager : MonoBehaviour
     public GameObject doorPrefab;
     static Dictionary<int, List<GameObject>> keysToDoors;
     static List<int> numDoors;
+
+    //Door Sound
+    public AudioClip doorOpenClipSource;
+    static AudioClip doorOpenClip;
+
+    public AudioClip entryDestroyClipSource;
+    static AudioClip entryDestroyClip;
+
 
     // All Locked Doors
     public Vector3 greenDoorSpawn;
@@ -105,6 +114,9 @@ public class MapManager : MonoBehaviour
         pickedKeys = new List<bool>();
         keys = new List<GameObject>();
         numDoors = new List<int>();
+        doorOpenClip = doorOpenClipSource;
+        entryDestroyClip = entryDestroyClipSource;
+
 
         inScene = false;
 
@@ -221,7 +233,6 @@ public class MapManager : MonoBehaviour
 
     public static void UpdateNavMesh()
     {
-        CoroutineRunner.Instance.RunWaitCoroutine();
         surface.BuildNavMesh();
     }
 
@@ -269,7 +280,11 @@ public class MapManager : MonoBehaviour
                                 {
                                     UIManager.UpdateIcons(i);
                                 }
-                                Destroy(door);
+
+                                AudioSource doorDestroyAudioSource = item.GetComponent<AudioSource>();
+                                doorDestroyAudioSource.clip = entryDestroyClip;
+                                doorDestroyAudioSource.Play();
+                                Destroy(door, doorDestroyAudioSource.clip.length);
                                 UpdateNavMesh();
                             }
                         }
@@ -281,7 +296,12 @@ public class MapManager : MonoBehaviour
         {
             DoorController openedDoor = item.GetComponent<DoorController>();
             openedDoor.isOpened = !openedDoor.isOpened;
-            //CoroutineRunner.Instance.RunWaitCoroutine();
+
+            AudioSource doorOpenAudioSource = item.GetComponent<AudioSource>();
+            doorOpenAudioSource.clip = doorOpenClip;
+            doorOpenAudioSource.Play();
+
+            CoroutineRunner.Instance.RunWaitCoroutine();
             UpdateNavMesh();
         }
         if (item.CompareTag("Vent")) {
@@ -294,7 +314,11 @@ public class MapManager : MonoBehaviour
                     if (Vector3.Distance(pos, item.transform.position) < 0.01f && pickedDrill)
                     {
                         vents[i] = null;
-                        Destroy(vent);
+                        AudioSource ventAudioSource = item.GetComponent<AudioSource>();
+                        ventAudioSource.clip = entryDestroyClip;
+                        ventAudioSource.Play();
+
+                        Destroy(vent, ventAudioSource.clip.length);
                         UpdateNavMesh();
                     }
                 }

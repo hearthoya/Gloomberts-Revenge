@@ -48,7 +48,64 @@ MonoBehaviour:
   playerSpawn: {x: -7.5, y: 3.2, z: 23}
   gloombertPrefab: {fileID: 0}
   gloomSpawn: {x: 6.5690017, y: 3.8, z: -5.1349225}
-  keyPrefab: {fileID: 3698725727416570896, guid: d8c6cd36e32dbf64386abca5ee201213, type: 3}
+  navMeshSurfaceObject: {fileID: 0}
   doorPrefab: {fileID: 6579551099114727890, guid: c26fef374f5b29045a504f875c934f05, type: 3}
+  doorOpenClipSource: {fileID: 8300000, guid: e9a71bb38601dfc4da77270b14998a9e, type: 3}
+  entryDestroyClipSource: {fileID: 8300000, guid: 9cb13f30690e90047acd8506865a0982, type: 3}
+  greenDoorSpawn: {x: 0, y: 0, z: 0}
+  greenDoorRotation: {x: 0, y: 0, z: 0, w: 0}
   yellowDoorSpawn: {x: -6.48, y: 4.4, z: 8.67}
+  yellowDoorRotation: {x: 0, y: 0, z: 0, w: 0}
+  blueDoorSpawn1: {x: 0, y: 0, z: 0}
+  blueDoorRotation1: {x: 0, y: 0, z: 0, w: 0}
+  blueDoorSpawn2: {x: 0, y: 0, z: 0}
+  blueDoorRotation2: {x: 0, y: 0, z: 0, w: 0}
+  greyDoorSpawn: {x: 0, y: 0, z: 0}
+  greyDoorRotation: {x: 0, y: 0, z: 0, w: 0}
+  cyanDoorSpawn1: {x: 0, y: 0, z: 0}
+  cyanDoorRotation1: {x: 0, y: 0, z: 0, w: 0}
+  cyanDoorSpawn2: {x: 0, y: 0, z: 0}
+  cyanDoorRotation2: {x: 0, y: 0, z: 0, w: 0}
+  redDoorSpawn: {x: 0, y: 0, z: 0}
+  redDoorRotation: {x: 0, y: 0, z: 0, w: 0}
+  whiteDoorSpawn: {x: 0, y: 0, z: 0}
+  whiteDoorRotation: {x: 0, y: 0, z: 0, w: 0}
+  keyPrefab: {fileID: 3698725727416570896, guid: d8c6cd36e32dbf64386abca5ee201213, type: 3}
+  greenKeySpawn: {x: 0, y: 0, z: 0}
+  greenKeyRotation: {x: 0, y: 0, z: 0, w: 0}
   yellowKeySpawn: {x: -7.5, y: 3.2, z: 20}
+  yellowKeyRotation: {x: 0, y: 0, z: 0, w: 0}
+  blueKeySpawn: {x: 0, y: 0, z: 0}
+  blueKeyRotation: {x: 0, y: 0, z: 0, w: 0}
+  greyKeySpawn: {x: 0, y: 0, z: 0}
+  greyKeyRotation: {x: 0, y: 0, z: 0, w: 0}
+  cyanKeySpawn: {x: 0, y: 0, z: 0}
+  cyanKeyRotation: {x: 0, y: 0, z: 0, w: 0}
+  redKeySpawn: {x: 0, y: 0, z: 0}
+  redKeyRotation: {x: 0, y: 0, z: 0, w: 0}
+  whiteKeySpawn: {x: 0, y: 0, z: 0}
+  whiteKeyRotation: {x: 0, y: 0, z: 0, w: 0}
+  ventPrefab: {fileID: 0}
+  drillPrefab: {fileID: 0}
+  drillSpawn: {x: 0, y: 0, z: 0}
+  drillRotation: {x: 0, y: 0, z: 0, w: 0}
+  ventStartBigSpawn: {x: 0, y: 0, z: 0}
+  ventStartBigRotation: {x: 0, y: 0, z: 0, w: 0}
+  ventBigStartSpawn: {x: 0, y: 0, z: 0}
+  ventBigStartRotation: {x: 0, y: 0, z: 0, w: 0}
+  ventClosetRoomSpawn: {x: 0, y: 0, z: 0}
+  ventClosetRoomRotation: {x: 0, y: 0, z: 0, w: 0}
+  ventRoomClosetSpawn: {x: 0, y: 0, z: 0}
+  ventRoomClosetRotation: {x: 0, y: 0, z: 0, w: 0}
+  ventRoomVentSpawn: {x: 0, y: 0, z: 0}
+  ventRoomVentRotation: {x: 0, y: 0, z: 0, w: 0}
+  ventVentRoomSpawn: {x: 0, y: 0, z: 0}
+  ventVentRoomRotation: {x: 0, y: 0, z: 0, w: 0}
+  ventBelowSpawn: {x: 0, y: 0, z: 0}
+  ventBelowRotation: {x: 0, y: 0, z: 0, w: 0}
+  ventEndGloomSpawn: {x: 0, y: 0, z: 0}
+  ventEndGloomRotation: {x: 0, y: 0, z: 0, w: 0}
+  ventGloomEndSpawn: {x: 0, y: 0, z: 0}
+  ventGloomEndRotation: {x: 0, y: 0, z: 0, w: 0}
+  ventHallwayEndSpawn: {x: 0, y: 0, z: 0}
+  ventHallwayEndRotation: {x: 0, y: 0, z: 0, w: 0}

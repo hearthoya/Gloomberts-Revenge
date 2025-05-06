@@ -6622,8 +6622,8 @@ MonoBehaviour:
   blueIconPosition: {x: 897, y: 280, z: 0}
   greyIconPosition: {x: 897, y: 180, z: 0}
   cyanIconPosition: {x: 897, y: 80, z: 0}
-  redIconPosition: {x: 897, y: -180, z: 0}
-  whiteIconPosition: {x: 897, y: -280, z: 0}
+  redIconPosition: {x: 897, y: -20, z: 0}
+  whiteIconPosition: {x: 897, y: -120, z: 0}
 --- !u!1001 &616410022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8091,6 +8091,8 @@ MonoBehaviour:
   gloomSpawn: {x: 4.31, y: 2, z: -38.9}
   navMeshSurfaceObject: {fileID: 1342673680}
   doorPrefab: {fileID: 3753929527186385182, guid: e27ace3393fc12c49816d431ff61283f, type: 3}
+  doorOpenClipSource: {fileID: 8300000, guid: e9a71bb38601dfc4da77270b14998a9e, type: 3}
+  entryDestroyClipSource: {fileID: 8300000, guid: 4e92dee1f699f96468680e10df8df49f, type: 3}
   greenDoorSpawn: {x: 40.91, y: 3.25, z: -21.42}
   greenDoorRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   yellowDoorSpawn: {x: -38.01, y: 3.25, z: -0.7}
